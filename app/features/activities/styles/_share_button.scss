@@ -1,0 +1,15 @@
+activity-share-button {
+  .standby svg {
+    left: 0;
+    top: -0.5rem;
+    width: 3.625rem;
+    height: 3.625rem;
+  }
+
+  .pressed svg {
+    left: 0.1rem;
+    top: -0.8rem;
+    width: 3.813rem;
+    height: 3.750rem;
+  }
+}

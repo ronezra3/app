@@ -1,0 +1,72 @@
+$session-report-time-picker-background-color: #e6e5e4;
+$session-reports-time-picker-text-color: #515151;
+$book-location-color: #a5a6a6;
+
+.session-reports-time-picker {
+  margin-top: 4.063rem;
+
+  .session-reports-month-picker-container {
+    background-color: $session-report-time-picker-background-color;
+    border-radius: 1.5rem;
+    height: 3.125rem;
+    display: flex;
+    margin: auto;
+    width: 16.188rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .session-reports-between-arrows {
+      flex: 1;
+    }
+
+    .session-reports-time-right-arrow path,
+    .session-reports-time-left-arrow path {
+      fill: #cac7c4;
+    }
+
+    .session-reports-time-right-arrow svg,
+    .session-reports-time-left-arrow svg{
+      vertical-align: middle;
+    }
+
+    .session-reports-month-picker {
+      background-color: transparent;
+      text-align: center;
+      color: $session-reports-time-picker-text-color;
+      font-size: 1rem;
+      width: 100%;
+
+      &::-webkit-calendar-picker-indicator,
+      &::-webkit-clear-button,
+      &::-webkit-inner-spin-button {
+        display: none;
+      }
+
+      &::-webkit-date-and-time-value {
+        @include middle-align;
+      }
+    }
+  }
+}
+
+.session-reports-items {
+  margin-top: 4.063rem;
+
+  text-align: right;  
+}
+
+.loader-container {
+  width: 12rem;
+  display: inline-block;
+  overflow: hidden;
+  @include middle-align();
+}
+
+.session-report-item {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+@import "session_report_item";
+@import "session_report";

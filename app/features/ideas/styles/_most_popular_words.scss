@@ -1,0 +1,23 @@
+.popular-words-container {
+  text-align: center;
+  color: $ideas-color;
+  margin-left: auto;
+  margin-top: 0.563rem;
+  margin-right: auto;
+  padding-top: 1.625rem;
+  padding-bottom: 1.313rem;
+  @include direction;
+}
+
+.popular-words-container .popular-words-title {
+  display: block;
+  font-size: 0.875rem;
+  font-family: Alef; 
+  font-style: italic;
+}
+
+.popular-words-container .popular-words-text {
+  font-size: 1rem;
+  font-family: Alef; 
+  font-weight: 600; font-style: italic;
+}

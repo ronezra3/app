@@ -1,0 +1,10 @@
+<view class="light-view flex-view ideas">
+  <activity-nav-bar></activity-nav-bar>
+  <activity-enrich-preview-footer activity="$ctrl.activity" type="ideas" get-specific-data="$ctrl.getSpecificData()"
+                                  is-valid="$ctrl.form.$valid"></activity-enrich-preview-footer>
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+      <preview-header type="ideas" is-required="true" field-name="title" activity="$ctrl.activity" form="$ctrl.form"></preview-header>
+    </form>
+  </content>
+</view>

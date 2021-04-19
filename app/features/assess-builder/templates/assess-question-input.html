@@ -1,0 +1,14 @@
+<button class="assess-question-remove-button" ng-click="$ctrl.remove()">
+  <ng-include src="'images/x-icon.png'"></ng-include>
+</button>
+<span class="assess-question-number">{{$ctrl.getIndex()}}.</span>
+
+<article ng-switch on="$ctrl.question.type">
+  <assess-boolean-question question="$ctrl.question" immediate-feedback="$ctrl.immediateFeedback"
+                           ng-switch-when="boolean"></assess-boolean-question>
+  <assess-closed-question question="$ctrl.question" immediate-feedback="$ctrl.immediateFeedback"
+                          ng-switch-default></assess-closed-question>
+</article>
+
+
+

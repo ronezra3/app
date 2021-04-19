@@ -1,0 +1,43 @@
+book-thumbnail button {
+  position: relative;
+
+  .thumbnail {
+    max-width: 10.938rem;
+    max-height: 15.313rem;
+  }
+
+  .overlay {
+    min-width: 3.813rem;
+    min-height: 3.813rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+    .download {
+      border-radius: 50%;
+      width: 3.813rem;
+      height: 3.813rem;
+      background-color: rgba(0, 0, 0, 0.6);
+
+      &.ng-click-active:enabled {
+        background-color: rgba(0, 0, 0, 8);
+      }
+
+      svg path {
+        fill: $main-color;
+      }
+    }
+  }
+
+  &:disabled,
+  &.ng-click-active:enabled {
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

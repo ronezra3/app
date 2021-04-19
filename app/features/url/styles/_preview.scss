@@ -1,0 +1,47 @@
+.url {
+  .content {
+    .link-preview {
+      width: 100%;
+      margin: 0 auto;
+      border-top: 0;
+    }
+
+    .url-input-square-bottom {
+      border-radius: 0.3125rem 0.3125rem 0 0 !important;
+    }
+
+    loader {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+      margin-right: 1rem;
+    }
+
+    preview-header .activity-header {
+      margin-bottom: 0;
+    }
+  }
+
+  .url-add-answer {
+    height: 2.55rem;
+    text-align: center;
+    background-image: linear-gradient(90deg, #67B4DD, #4E8CCA, #3667B8);
+    border-radius: 0.5rem;
+    padding: 0.25vw 1vw 0.25vw 1vw;
+    font-size: 1.438rem;
+    color: white;
+    direction: rtl;
+  }
+}
+
+.url activity-enrich-preview-footer {
+  .url-add-answer {
+    margin-bottom:1vw;
+    background-image: linear-gradient(90deg, #67B4DD,#4E8CCA, #3667B8);
+    border-radius: 0.5rem;
+    width: 10rem;
+    font-size: 1.438rem;
+    color: white;
+    direction:rtl;
+  }
+}

@@ -1,0 +1,24 @@
+<view class="gray-view flex-view">
+  <navigation-bar>
+    <left-buttons>
+      <back-button></back-button>
+    </left-buttons>
+    <nav-bar-title>
+      <class-header-title class-info="classInfo" show-details="true"></class-header-title>
+      <span class="extended-title">{{'session-reports' | translate}}</span>
+    </nav-bar-title>
+  </navigation-bar>
+
+  <content>
+    <article class="session-reports-time-picker">
+      <time-picker-container class="session-reports-month-picker-container" right-button-click="increaseMonth()"
+                             left-button-click="decreaseMonth()">
+        <input type="month" ng-model="selectedDate" class="session-reports-month-picker"
+               ng-model-options="{getterSetter: true}"/>
+      </time-picker-container>
+    </article>
+
+    <session-reports-scroll class-id="{{classId}}" selected-date="selectedDate"
+                            members-count="allMembers.length"></session-reports-scroll>
+  </content>
+</view>

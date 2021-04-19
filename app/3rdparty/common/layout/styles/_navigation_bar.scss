@@ -1,0 +1,86 @@
+$nav-bar-height: 8.5vw;
+$nav-bar-height-m: 21vw;
+
+navigation-bar {
+  color: white;
+  font-size: 1rem;
+  font-style: italic;
+  align-items: center;
+  display: flex;
+  height: $nav-bar-height;
+  width: 100%;
+  z-index: 2;
+  //background-color: $main-color;
+  //background-image: linear-gradient(90deg, #69A741, #3C8D4D);
+  button {
+    font-style: normal;
+    min-height: 2vw;
+    min-width: 2vw;
+    padding-right: 0.4vw;
+    padding-left: 0.4vw;
+    border-radius: 1.5rem;
+    // &.ng-click-active {
+    //   background-color: $secondary_color;
+    // }
+    svg, span {
+      vertical-align: middle;
+    }
+  }
+
+  circle, rect, path {
+    fill: white;
+  }
+
+  .right-buttons {
+    min-width: 3vw;
+    margin-left: 7vw;
+    margin-top: 2vw;
+
+    right-buttons {
+      display: flex;
+
+      button {
+        // margin-left: -2.5vw;
+      }
+    }
+  }
+
+  @media only screen and (orientation: portrait) {
+    .right-buttons:empty {
+      min-width: 0;
+      margin-left: 0;
+    }
+  }
+
+  .nav-bar-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: -3vw;
+
+    nav-bar-title {
+      display: flex;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1.5vw; //1.750rem;
+      align-items: center;
+      margin-left: 4vw;
+
+      @media only screen and (orientation: portrait) {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  .left-buttons:not(:empty) {
+    margin-right: 0.5vw;
+    margin-top: -3vw;
+    margin-left: 0.5vw;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  navigation-bar {
+    height: $nav-bar-height-m;
+  }
+}

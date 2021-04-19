@@ -1,0 +1,28 @@
+<view class="light-view flex-view">
+  <navigation-bar>
+    <left-buttons>
+      <back-button></back-button>
+    </left-buttons>
+    <nav-bar-title>
+      <class-header-title class-info="ctrl.classInfo" show-details="true"></class-header-title>
+      <div class="extended-title">
+        <ng-include class="clock" src="'images/manage/lock_icon.png'"></ng-include>
+        <span>{{ ctrl.classInfo.code.toUpperCase()}}</span>
+      </div>
+    </nav-bar-title>
+  </navigation-bar>
+
+  <content scrollable="true">
+    <div class="class-menu">
+      <h2 class="main-title">{{ 'what_to_do' | translate }}</h2>
+
+      <div class="buttons-container">
+        <class-menu-item type="plan" ng-click="" ui-sref="enrich.reader.svg({bookId: 2, classId: ctrl.classInfo.id})"></class-menu-item>
+        <class-menu-item type="teach" ng-click="ctrl.sessionStarted()"></class-menu-item>
+        <class-menu-item type="review" ng-click="" ui-sref="reports({classId: ctrl.classInfo.id})"></class-menu-item>
+        <class-menu-item type="manage" ng-click="" ui-sref="manage.info({classId: ctrl.classInfo.id})"></class-menu-item>
+      </div>
+    </div>
+  </content>
+
+</view>

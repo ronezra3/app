@@ -1,0 +1,16 @@
+<view class="light-view flex-view story">
+  <activity-nav-bar></activity-nav-bar>
+  <nav class="activity-buttons-nav padded">
+    <story-publish-button activity="$ctrl.activity" class="primary"
+                             type="story" specific-data="$ctrl.getSpecificData()"
+                             is-dirty="true"
+                             is-valid="$ctrl.validate()" pre-publish="$ctrl.prePublish()"
+                             post-publish="$ctrl.postPublish()"></story-publish-button>
+  </nav>
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+        <story-preview-content is-required="true" form="$ctrl.form" activity="$ctrl.activity"></story-preview-content>
+    </form>
+  </content>
+
+</view>

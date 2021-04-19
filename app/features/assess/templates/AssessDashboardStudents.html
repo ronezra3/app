@@ -1,0 +1,30 @@
+<div class="assess-dashboard-students-header">
+  <div class="assess-dashboard-students-tabs">
+    <button class="assess-dashboard-students-tab" ng-click="ctrl.setStudentsFilter('working')">
+      <div class="assess-dashboard-students-tab-text">{{'working' | translate}} ({{ctrl.studentsData.working.length}})
+      </div>
+      <div class="assess-dashboard-students-tab-underline" ng-show="ctrl.studentsFilter === 'working'"></div>
+    </button>
+    <button class="assess-dashboard-students-tab" ng-click="ctrl.setStudentsFilter('almost')">
+      <div class="assess-dashboard-students-tab-text">{{'about-to-finish' | translate}}
+        ({{ctrl.studentsData.almost.length}})
+      </div>
+      <div class="assess-dashboard-students-tab-underline" ng-show="ctrl.studentsFilter === 'almost'"></div>
+    </button>
+    <button class="assess-dashboard-students-tab" ng-click="ctrl.setStudentsFilter('finished')">
+      <div class="assess-dashboard-students-tab-text">{{'finished' | translate}}
+        ({{ctrl.studentsData.finished.length}})
+      </div>
+      <div class="assess-dashboard-students-tab-underline" ng-show="ctrl.studentsFilter === 'finished'"></div>
+    </button>
+  </div>
+
+  <search-box model="ctrl.search" class="assess-dashboard-students-search"></search-box>
+</div>
+
+<div class="assess-dashboard-students-box">
+  <div class="assess-dashboard-students-list">
+    <assess-student-button open-student-stats="ctrl.openStudentStats({student: student})" student="student"
+                           ng-repeat="student in ctrl.getVisibleStudents() | searchStudent:ctrl.search"></assess-student-button>
+  </div>
+</div>

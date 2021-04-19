@@ -1,0 +1,40 @@
+$avatar-width: 8rem;
+$camera-width: 7.7rem;
+
+.login-avatar {
+  width: $avatar-width;
+  height: $avatar-width;
+  border-radius: 50%;
+  border: 2px solid $secondary-color;
+  background-color: $secondary-color;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 1, 0.16);
+  cursor: pointer;
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .image {
+      display: inline-block;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .pen {
+      position: absolute;
+      left: calc(50% - 0.9rem);
+      bottom: -1px;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  avatar-picker-preview {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}

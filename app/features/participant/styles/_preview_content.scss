@@ -1,0 +1,13 @@
+.participant {
+  .question-mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .animation-preview {
+    margin-top: 2rem;
+    display: flex;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,60 @@
+.poll.session-repeat-item-activity-icon svg {
+  height: 1.688rem;
+  width: 1.688rem;
+
+  path {
+    fill: $poll-color;
+  }
+}
+
+.poll-session-report-answers {
+  margin: auto 1.375rem 1.375rem;
+  display: block;
+}
+.poll-session-report-answers .poll-answer-status-wrapper {
+  margin: 0;
+}
+.poll-session-report-answers .poll-answer-status-progress{
+  height: 1.938rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0;
+}
+
+.poll-session-report-answers .poll-answer-status-title {
+  font-size: 0.869rem;
+  top: 0.9rem;
+}
+
+.poll-session-report-answers .poll-answer-status-number {
+  font-size: 1.181rem;
+  top: 0.625rem;
+}
+
+.poll-session-report-answers .poll-answer-voters-icon svg{
+  width: 0.438rem;
+  height: 0.5rem;
+}
+
+.poll-session-report-title {
+  margin-top: 2.25rem;
+  text-align: center;
+  font-family: Alef; 
+  font-weight: 600; font-style: italic;
+  font-size: 1.25rem;
+  color: $session-report-dark-color;
+  @include direction;
+
+}
+
+.poll-session-report-replied-number {
+  margin-top: 1.688rem;
+  display: block;
+}
+
+.poll-session-report-replied-number .replied-counter {
+  font-size: 1rem;
+}
+
+.poll-session-report-replied-number .replied-label {
+  font-size: 1rem;
+}

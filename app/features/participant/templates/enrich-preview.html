@@ -1,0 +1,11 @@
+<view class="light-view light-view flex-view participant">
+  <activity-nav-bar></activity-nav-bar>
+  <activity-enrich-preview-footer activity="$ctrl.activity" type="participant"
+                                  get-specific-data="$ctrl.getSpecificData()"
+                                  is-valid="$ctrl.form.$valid"></activity-enrich-preview-footer>
+  <content scrollable="true">
+    <form name="$ctrl.form">
+      <participant-preview-content is-required="true" activity="$ctrl.activity" form="$ctrl.form"></participant-preview-content>
+    </form>
+  </content>
+</view>

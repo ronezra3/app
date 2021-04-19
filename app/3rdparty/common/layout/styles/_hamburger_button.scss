@@ -1,0 +1,27 @@
+hamburger-button {
+  display: flex;
+  position:absolute;
+  // right:0;
+  right: 4vw;
+  top: 2vw;
+
+  button {
+    border-radius: 50%;
+    display: none;
+
+    svg {
+      vertical-align: middle;
+    }
+
+    @media only screen and (max-width: $mini-tablet-max-screen-height) and (orientation: landscape),
+    screen and (orientation: portrait) {
+      display: inline-block;
+    }
+    @media only screen and (max-width: $mini-tablet-max-screen-height) and (orientation: landscape) {
+      display: flex;
+      position:absolute;
+      right: -3vw;
+      top: -1vw;
+    }
+  }
+}

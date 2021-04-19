@@ -1,0 +1,90 @@
+.assess.question-stats {
+  .question {
+    @extend .assess-dashboard-need-help-question;
+    @include horizontal-center();
+    display: block;
+  }
+
+  .text {
+    @include horizontal-center();
+    display: block;
+    font-style: italic;
+    color: #0d2c35;
+    font-size: 1.313rem;
+    margin-top: 0.8125rem;
+  }
+
+  .replied {
+    @include horizontal-center();
+    margin-top: 3rem;
+  }
+
+  .replied-count {
+    display: inline-block;
+    font-weight: 600;
+    font-style: italic;
+    color: rgba(7, 23, 28, 0.7);
+    font-size: 1.105rem;
+  }
+
+  .replied-text {
+    display: inline-block;
+    font-weight: 300;
+    color: #6d7173;
+    font-size: 1.105rem;
+  }
+
+  .results {
+    @include horizontal-center();
+    display: block;
+    margin-top: 3rem;
+  }
+
+  .number {
+    @include horizontal-center();
+    display: inline-block;
+    font-style: italic;
+    font-size: 4.688rem;
+    margin-right: 1.05rem;
+    margin-left: 1.05rem;
+
+    &.incorrect {
+      color: $assess-incorrect-color;
+    }
+
+    &.correct {
+      color: $assess-correct-color;
+    }
+  }
+
+  .person {
+    display: inline-block;
+    margin-right: 0.5rem;
+    .head {
+      border-radius: 50%;
+      border: 5px solid;
+      width: 0.7rem;
+      height: 0.7rem;
+      margin: auto;
+    }
+
+    .body {
+      border: 1px solid;
+      width: 1.2rem;
+      height: 0.7rem;
+      margin-top: 2px;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+    }
+
+    .head.correct, .body.correct {
+      border-color: $assess-correct-color;
+      background-color: $assess-correct-color;
+    }
+
+    .head.incorrect, .body.incorrect {
+      border-color: $assess-incorrect-color;
+      background-color: $assess-incorrect-color;
+    }
+  }
+}

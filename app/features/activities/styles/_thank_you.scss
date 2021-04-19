@@ -1,0 +1,36 @@
+/* thank you palette color */
+$thank-you-icon-color: white;
+$thank-you-font-color: white;
+/**************************/
+
+.thank-you .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // color: $thank-you-font-color;
+  align-items: center;
+
+  svg {
+    // width: 2.375rem;
+    height: 10.313rem;
+
+    path {
+      fill: $thank-you-icon-color;
+    }
+  }
+
+  h1, h2 {
+    font-size: 2.412rem;
+    font-style: italic;
+    line-height: 1.194;
+    color: #2B8252;
+    @media only screen and (max-width: $smart-phone-max-screen-width) and (orientation: portrait),
+    screen and (max-width: $smart-phone-max-screen-height) and (orientation: landscape) {
+      font-size: 2.2rem;
+    }
+  }
+  p {
+    font-size: 18px;
+    direction: rtl;
+  }
+}

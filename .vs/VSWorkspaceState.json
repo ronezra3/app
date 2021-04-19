@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app\\features",
+    "\\app\\features\\classes",
+    "\\app\\features\\classes\\styles",
+    "\\app\\features\\participant",
+    "\\app\\features\\participant\\templates",
+    "\\app\\features\\poll",
+    "\\app\\features\\poll\\templates",
+    "\\app\\features\\snapshot"
+  ],
+  "SelectedNode": "\\app",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,29 @@
+books {
+  li {
+    margin-left: 0.95rem;
+    margin-right: 0.95rem;
+    margin-top: 3.125rem;
+  }
+
+  loader {
+    width: 10.938rem;
+    height: 13.438rem;
+
+    @media only screen and (max-width: $smart-phone-max-screen-height) and (orientation: landscape) {
+      margin: 1rem 1rem 0 1rem;
+    }
+  }
+
+  @media only screen and (max-width: $smart-phone-max-screen-width) and (orientation: portrait) {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    loader {
+      margin: 1rem 1rem 0 1rem;
+    }
+  }
+}
+
+@import "book_thumbnail";

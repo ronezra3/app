@@ -1,0 +1,29 @@
+.manage-students-view {
+  background-color: #f1f0ef;
+}
+.manage-class-students {
+  font-family: Alef;
+  font-style: italic;
+  color:  #3b5862;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 3.188rem;
+}
+
+.manage-class-students-section {
+  border-radius: 2px;
+  background-color:  #ffffff;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  overflow: hidden;
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
+  margin-bottom: 1rem;
+}
+
+@import "class_student";
+@import "manage_student_modal";
+@import "manage_new_password_modal";
+@import "manage_student_remove";
+@import "manage_student_avatar";
+@import "manage_password_reset";

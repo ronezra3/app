@@ -1,0 +1,79 @@
+.user-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-image: url(../images/TopMenuBg.png);
+  background-size: cover;
+  width: 25vw;
+  height: 10.5vw;
+
+  .buttons-container {
+    padding: 0.5vw 0;
+  }
+
+  .user-name {
+    font-family: Alef;
+    font-style: italic;
+    color: #15404e;
+    font-size: 1.5vw;
+    font-weight: 700;
+  }
+
+  .user-button {
+    font-family: Alef;
+    font-style: italic;
+    color: #15404e;
+    font-size: 2vw;
+    font-weight: 700;
+    display: block;
+    padding-right: 3.3vw;
+    margin-bottom: auto;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+    width: 90%;
+    height: 3.5vw;
+    background-size: 2.5vw 2.5vw;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: 0.7vw;
+  }
+
+  .user-button.logout {
+    background-image: url(../images/LogOutIcon.png);
+  }
+
+  .user-button.profile {
+    background-image: url(../images/ProfileIcon.png);
+  }
+
+  .user-button.ng-click-active:enabled {
+    background-color: #f1f0ef;
+    border-radius: 30px;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .user-menu {
+    width: 65vw;
+    height: 27.36vw;
+
+    .buttons-container {
+      padding: 1vw 0;
+    }
+
+    .user-name {
+      font-size: 3vw;
+      font-weight: 700;
+    }
+
+    .user-button {
+      padding-right: 7.5vw;
+      height: 9vw;
+      font-size: 5vw;
+      background-size: 6vw 6vw;
+      background-position-y: 2vw;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$assess-incorrect-color: #ff0356;
+$assess-correct-color: #34a53f;
+$assess-dashboard-rectangles-color: #f9f9f9;
+$assess-dashboard-sub-header-color: #3b5862;
+
+.assess-dashboard-sub-header {
+  text-align: right;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1rem;
+  direction: rtl;
+  color: $assess-dashboard-sub-header-color;
+}
+
+.assess.results {
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    @import "assess_dashboard_need_help";
+    @import "assess_dashboard_middle";
+    @import "assess_dashboard_students";
+    @import "assess_progress_bar";
+    @import "student_button";
+  }
+}
+
+@import "assess_dashboard_header";
+@import "assess_question_status";
+@import "assess_student_status";

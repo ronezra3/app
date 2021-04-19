@@ -1,0 +1,85 @@
+.yes-no-chart {
+  width: 22rem;
+  height: 22rem;
+  margin-top: -6rem;
+}
+
+.yes-chart {
+  stroke: $snapshot-yes;
+}
+
+.no-chart {
+  stroke: $snapshot-no;
+}
+
+.chart-inner-circle {
+  fill: #f1f0ef;
+}
+
+.snapshot-label {
+  display: inline-block;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.5rem;
+  width: 8rem;
+  height: 8rem;
+  margin-top: -8rem;
+  background-color: #eef0ef;
+  border-radius: 4rem;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+
+  .yes-no-num {
+    margin-top: -3rem;
+    //font-weight: bold;
+  }
+}
+
+.snapshot-label-no {
+  @extend .snapshot-label;
+  color: $snapshot-no;
+  left: 0;
+  margin-right: 1rem;
+}
+
+.snapshot-label-yes {
+  @extend .snapshot-label;
+  color: $snapshot-yes;
+  right: 0;
+  margin-left: 1rem;
+}
+
+.donut-title-wrapper text {
+  fill: $snapshot-gray-text-color;
+}
+
+.circle-animation {
+  transition: stroke-dashoffset 1s;
+  fill: none;
+  transform-origin: center;
+}
+
+.donut-title-counter {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.donut-title-replied {
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: $mini-tablet-max-screen-width) and (orientation: portrait),
+screen and (max-width: $smart-phone-max-screen-height) and (orientation: landscape) {
+  .yes-no-chart {
+    display: none;
+  }
+
+  yes-no-donut {
+    height: auto;
+    width: 18rem;
+  }
+
+  .snapshot-label {
+    margin-top: 0;
+  }
+}

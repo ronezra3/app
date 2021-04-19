@@ -1,0 +1,34 @@
+<view hardware-back-button-enabled="false" class="thank-you" ng-class="type">
+  <content class="narrow">
+    <ng-include src="'images/new/ic4.png'"></ng-include>
+    <div ng-switch="randomFeedback" style="direction:rtl">
+      <div ng-switch-when="1">
+        <h1>תודה ששיתפת אותנו</h1>
+
+        <p>
+          על הדרך שיפרת
+          <br>
+          את הסיכוי שלך לזכור!
+        </p>
+      </div>
+      <div ng-switch-when="2">
+        <h1>כיף ששיתפת אותנו</h1>
+
+        <p>
+          ההשתתפות במפגש משפרת
+          <br>
+          את הסיכוי שלך לזכור!
+        </p>
+      </div>
+      <div ng-switch-when="3">
+        <h1>תודה על ההשתתפות</h1>
+
+        <p>
+    כל השתתפות במפגש
+          <br>
+מסייעת לזכור את התוכן!
+        </p>
+      </div>
+    </div>
+  </content>
+</view>

@@ -1,0 +1,21 @@
+$panel-buttons-enable-color: #fefefe;
+
+$panel-middle-buttons-color: #22282e;
+$panel-top-buttons-color: #263039;
+
+$panel-rows-count: 6;
+
+.panel-section li {
+  float: left;
+  height: calc((100vh - #{$nav-bar-height}) / #{$panel-rows-count});
+  width: 50%;
+  min-height: 5.875rem;
+  max-height: 6.875rem;
+
+  @media only screen and (max-width: $mini-tablet-max-screen-width) and (orientation: portrait),
+  screen and (max-width: $mini-tablet-max-screen-height) and (orientation: landscape) {
+    height: 6.875rem;
+  }
+}
+
+@import "panel_button";

@@ -1,0 +1,18 @@
+<view class="light-view flex-view snapshot">
+  <activity-nav-bar></activity-nav-bar>
+  <nav class="activity-buttons-nav padded">
+    <activity-publish-button activity="$ctrl.activity" class="primary"
+                             type="snapshot" specific-data="$ctrl.getSpecificData()"
+                             is-dirty="$ctrl.form.$dirty"
+                             is-valid="$ctrl.form.$valid" pre-publish="$ctrl.prePublish()"
+                             post-publish="$ctrl.postPublish()"></activity-publish-button>
+  </nav>
+
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+      <preview-header type="snapshot" is-required="false" field-name="question" activity="$ctrl.activity"
+                      form="$ctrl.form"></preview-header>
+    </form>
+    <snapshot-preview-content></snapshot-preview-content>
+  </content>
+</view>

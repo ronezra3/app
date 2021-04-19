@@ -1,0 +1,191 @@
+$assess-fieldset-title-color: #898989;
+
+.assess-preview-fieldset-icon {
+  width: 1.813rem;
+  height: 1.813rem;
+  display: inline-block;
+  background-color: $assess-fieldset-title-color;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1;
+}
+
+.assess-preview-fieldset-icon > * {
+  display: inline-block;
+  width: 0.938rem;
+  height: 0.938rem;
+  @include middle-align;
+}
+
+.assess-preview-time-container {
+  width: 4.813rem;
+  height: 2.25rem;
+  border: 0.063rem $assess-color solid;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 1rem;
+  display: block;
+  cursor: pointer;
+  direction: $bi-app-direction;
+}
+
+.assess-preview-time-text {
+  color: $assess-color;
+  font-size: 1rem;
+}
+
+input[type='number'].assess-preview-time-input {
+  color: $assess-color;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: transparent;
+  display: inline-block;
+  width: 1.625rem;
+  direction: rtl;
+  padding: 0;
+  height: 100%;
+
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
+.assess-preview-fieldset {
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.063rem dashed rgba(119, 119, 119, 0.5);
+  margin-top: 2.5rem;
+  padding: 1.938rem;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.assess-settings-wrapper > * {
+  flex: 1;
+}
+
+.assess-settings-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.assess-preview-fieldset-title-container {
+  padding-left: 1.625rem;
+  padding-right: 1.625rem;
+  background: white;
+  border: none;
+  margin: 0 auto;
+}
+
+.assess-preview-fieldset-title {
+  font-weight: 600;
+  font-style: italic;
+  color: $assess-fieldset-title-color;
+  font-size: 1.116rem;
+}
+
+.assess-preview-settings-col-title {
+  text-align: center;
+  font-weight: 600;
+  color: $assess-color;
+  font-size: 0.875rem;
+}
+
+.assess-preview-settings-checkbox {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 1rem;
+  width: 2.125rem;
+  height: 2.125rem;
+  background-color: transparent;
+  border: solid $assess-color 0.063rem;
+  border-radius: 0.125rem;
+  padding: 0;
+
+  svg {
+    width: 1rem;
+    height: 0.875rem;
+
+    path {
+      fill: $assess-color;
+    }
+  }
+}
+
+.assess-questions-types > * {
+  margin: auto;
+}
+
+.assess-preview-add-question-button {
+  background-color: #f1f0ef;
+  border-radius: 0.313rem;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.931rem;
+  color: #696969;
+  border: none;
+  height: 6.938rem;
+  width: 12.125rem;
+  text-align: center;
+
+  &.ng-click-active {
+    // background-color: #e1d4e2;
+  }
+}
+
+.assess-preview-add-question-icon {
+  width: 2.188rem;
+  height: 2.188rem;
+  background-color: $assess-color;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.assess-preview-add-question-icon > * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1.063rem;
+  height: 1.063rem;
+  @include middle-align;
+}
+
+.assess-preview-add-question-button-text {
+  margin-top: 0.688rem;
+  display: block;
+}
+
+.assess-preview-question {
+  display: block;
+  margin-top: 3.25rem;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.assess-preview-question.ng-enter,
+.assess-preview-question.ng-leave {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.assess-preview-question.ng-leave.ng-leave-active,
+.assess-preview-question.ng-enter {
+  opacity: 0;
+}
+
+.assess-preview-question.ng-leave,
+.assess-preview-question.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.assess-start-text {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  color: #123e4c;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 2.5rem;
+}

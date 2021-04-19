@@ -1,0 +1,25 @@
+.empty-mode {
+  @include middle-xy;
+  font-family: Alef;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    color: #515151;
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    color: #6a6a6a;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0;
+    color: rgba(74, 74, 74, 0.5);
+    font-size: 1.1rem;
+  }
+}
+

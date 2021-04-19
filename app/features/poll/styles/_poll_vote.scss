@@ -1,0 +1,57 @@
+/* snapshot vote palette color */
+$poll-button-vote-color: black;
+/**************************/
+
+// @mixin poll-vote-answer-button-background($answer-index) {
+//   background-color: nth($poll-answers-colors, $answer-index);
+// }
+
+// @mixin poll-vote-answer-pressed-background($answer-index) {
+//   background-color: nth($poll-answers-pressed-colors, $answer-index);
+// }
+
+// @for $i from 1 through $max-poll-answers {
+//   ul.poll-vote-answers-list li:nth-child(#{$i}) button {
+//     @include poll-vote-answer-button-background($i);
+//   }
+
+//   ul.poll-vote-answers-list li:nth-child(#{$i}) button.ng-click-active {
+//     @include poll-vote-answer-pressed-background($i);
+//   }
+// }
+
+ul.poll-vote-answers-list li button {
+  //background-image: linear-gradient(90deg, #FDBC4D, #FDA840, #FD9636);
+  background-color: #eef0ef;
+  border-bottom: solid 2px #e7e7e7;
+}
+
+ul.poll-vote-answers-list li button[disabled="disabled"] {
+  background-image: linear-gradient(90deg, #FDBC4D, #FDA840, #FD9636);
+  // background-color: #eef0ef;
+  border-bottom: solid 2px #e7e7e7;
+}
+
+poll-submit-button button {
+  border: 0;
+  color: $poll-button-vote-color;
+  margin-top: 1.188rem;
+  margin-right: 1rem;
+  padding-right: 1rem;
+  width: 30.56rem;
+  height: 3.813rem;
+  font-family: Alef;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: right;
+  @include direction;
+}
+
+@media only screen and (orientation: portrait) {
+  poll-submit-button button {
+    margin-top: 1rem;
+    width: 88vw;
+    height: 3.3rem;
+  }
+}

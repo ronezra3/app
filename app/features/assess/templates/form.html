@@ -1,0 +1,18 @@
+<view class="assess form light-view">
+  <navigation-bar>
+    <left-buttons>
+      <back-button></back-button>
+    </left-buttons>
+    <nav-bar-title>
+      <div class="assess-report-title">{{$ctrl.activity.title || ('default-assess-title' | translate)}}</div>
+    </nav-bar-title>
+  </navigation-bar>
+
+  <content class="padded" scrollable="true">
+    <ol class="narrow assess-solve-student-questions">
+      <li class="assess-student-question" ng-repeat="question in $ctrl.activity.questions">
+        <student-question-mock question="question"></student-question-mock>
+      </li>
+    </ol>
+  </content>
+</view>

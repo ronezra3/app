@@ -1,0 +1,36 @@
+.assess {
+  &.missing-students-popup {
+    flex-direction: column-reverse;
+    top: 6vw;
+    left: 3rem;
+
+    .arrow {
+      border-bottom: 0.563rem solid #FDBC4D;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+    }
+
+    .missing-list {
+      background-color: $assess-secondary-color;
+
+      .app-label,
+      .offline-label {
+        color: white;
+      }
+    }
+  }
+
+  &.results, &.report, &.form {
+    navigation-bar {
+      // background-color: $assess-color;
+      .header-icon svg {
+        margin-right: 0.1rem;
+      }
+
+      button.selected,
+      button.ng-click-active {
+        background-color: $assess-secondary-color;
+      }
+    }
+  }
+}

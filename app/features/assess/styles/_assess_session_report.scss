@@ -1,0 +1,76 @@
+
+.assess-slide {
+  font-family: Alef;
+  font-style: italic;
+  padding: 0 4rem;
+  height: 100%;
+}
+
+.assess-session-report-title {
+  text-align: center;
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+  color: $session-report-dark-color;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  @include direction;
+}
+
+.assess-session-average-grade {
+  font-family: Alef;
+  color: $session-report-dark-color;
+  font-size: 1rem;
+  margin-top: 0.75rem;
+}
+
+.assess-session-report-book-location {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 1rem;
+
+  .book-location-book-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 9rem;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}
+
+.assess-session-report-table-first-col {
+  text-align: left;
+}
+
+.assess-session-report-student-avg {
+  color: #7f7f7f;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: Alef;
+}
+
+.assess-session-report-toggle-button {
+  background-color: rgba(177, 103, 194, 0.9);
+  width: 19.250rem;
+  height: 2.5rem;
+  border: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.6rem;
+  color: #fefefe;
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.assess-session-report-toggle-button.ng-click-active {
+  background-color: rgba(143, 83, 157, 0.9);
+}
+
+.assess-session-report-toggle-button-icon svg {
+  width: 0.625rem;
+  height: 0.438rem;
+  vertical-align: middle;
+}

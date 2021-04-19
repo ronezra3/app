@@ -1,0 +1,13 @@
+<view hardware-back-button-enabled="false" class="light-view participant play flex-view">
+  <activity-nav-bar style="visibility:hidden;"></activity-nav-bar>
+  <content>
+    <activity-header class="padded" type="participant" field="$ctrl.activity.instruction"></activity-header>
+    <searching-student students-script-ids="$ctrl.activity.studentsScriptIds" members="$ctrl.members"
+                       on-done="$ctrl.onDone()"></searching-student>
+  </content>
+  <nav ng-if="$ctrl.isTeacher()" class="narrow activity-buttons-nav padded">
+    <!-- <activity-end-button class="primary" type="participant"
+                         activity="$ctrl.activity"
+                         pre-share-callback="$ctrl.updateAttendance()"></activity-end-button> -->
+  </nav>
+</view>

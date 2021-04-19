@@ -1,0 +1,91 @@
+$assess-solve-correct-answer-inner-color: #34a53f;
+$assess-solve-correct-answer-outer-color: #d1f7d5;
+$assess-solve-incorrect-answer-inner-color: #d03232;
+$assess-solve-incorrect-answer-outer-color: #ffcede;
+$assess-solve-answer-color: #dbdbdb;
+
+.assess-solve-answer-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.1875rem;
+  background-color: #eef0ef;
+  border: solid 1px #e7e7e7;
+  border-radius: 0;
+
+  ng-include {
+    display: block;
+    height: 1.125rem;
+
+    svg {
+      width: 0.75rem;
+      height: 1.125rem;
+
+      path {
+        fill: $assess-color;
+        opacity: 0;
+      }
+    }
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+
+  &.selected {
+    background-image: linear-gradient(-90deg, #ff8617, #ffbe41);
+    border: solid 1px #ef8e22;
+
+    .circle {
+      background-image: linear-gradient(-90deg, #ff8617, #ffbe41); /* Standard syntax (must be last) */
+    }
+
+    path {
+      fill: $assess-solve-answer-color;
+    }
+  }
+
+  &.correct.immediate {
+    background-image: none;
+    background-color: #fff;
+    border-color: #248350;
+
+    path {
+      fill: $assess-solve-correct-answer-inner-color;
+      opacity: 1;
+    }
+
+    &.selected {
+      .circle {
+        background-color: $assess-solve-correct-answer-inner-color;
+      }
+
+      path {
+        fill: $assess-solve-correct-answer-inner-color;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.incorrect.immediate.selected {
+    background-image: none;
+    background-color: #fff;
+    border-color: #d03232;
+
+    .circle {
+      background-color: $assess-solve-incorrect-answer-inner-color;
+    }
+
+    path {
+      fill: $assess-solve-incorrect-answer-inner-color;
+      opacity: 1;
+    }
+  }
+
+  .circle {
+    border-radius: 50%;
+    background-color: #EEF0EF;
+    width: 1.1875rem;
+    height: 1.1875rem;
+    margin: auto;
+  }
+}

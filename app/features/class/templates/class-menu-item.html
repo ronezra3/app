@@ -1,0 +1,10 @@
+<button class="menu-button {{type}}">
+  <svg-icon src="{{'images/class/' + type + '_icon.png'}}" class="icon"></svg-icon>
+  <div class="text-container">
+    <span class="button-header">{{type | translate}}</span>
+    <br>
+    <span class="button-text">{{type + '_summary_first' | translate}}</span>
+    <br>
+    <span class="button-text">{{type + '_summary_second' | translate}}</span>
+  </div>
+</button>

@@ -1,0 +1,31 @@
+@mixin middle-align {
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+@mixin middle-xy {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+@mixin middle-align-items {
+  display: flex;
+  align-items: center;
+}
+
+@mixin transparent-button {
+  background-color: transparent;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+@mixin circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}

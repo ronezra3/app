@@ -1,0 +1,13 @@
+$single-sidenav-width: 8.5rem;
+
+teacher-panel {
+  width: $single-sidenav-width * 2;
+  height: 100%;
+  display: block;
+}
+
+student-panel {
+  width: $single-sidenav-width;
+  height: 100%;
+  display: block;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <input type="text" ng-model="userName">
+        <button ng-click="click()">reset</button>
+        <br>
+        new password:
+        {{response}}
+
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function ($scope, $http) {
+                url = "https://learni-lms-sales.herokuapp.com";
+                // url = "http://localhost:3000"
+                $scope.click = function () {
+                    $http({
+                        method: 'POST',
+                        url: `${url}/api/users/${$scope.userName}/resetPassword`,
+                        headers: {
+                            // 'Accept': '*/*',
+                            'version': '0.1.5',
+                            'Content-Type': 'application/json;charset=UTF-8'
+                        },
+
+                        data: {}
+                    }).then(function (result) {
+                        console.dir(result.data);
+                        $scope.response = result.data;
+                    }, function errorCallback(response) {
+                        console.log(response);
+                        
+                    });
+                }
+            });
+        </script>
+
+</body>
+
+</html>

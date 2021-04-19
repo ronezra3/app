@@ -1,0 +1,7 @@
+.fade-animation {
+  transition:all linear 0.4s;
+}
+
+.fade-animation.ng-hide {
+  opacity:0;
+}

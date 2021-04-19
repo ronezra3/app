@@ -1,0 +1,101 @@
+$snapshot-color: #FDA53E;
+$snapshot-secondary-color: #FDBC4D;
+$snapshot-yes: #2D8254;
+$snapshot-no: #D03C3E;
+$snapshot-gray-text-color: #6d7173;
+
+.snapshot {
+  &.are-you-sure {
+    @include are-you-sure-color($snapshot-color, $snapshot-secondary-color);
+  }
+
+  .activity-header .icon svg {
+    width: 3.5rem;
+    height: 2.313rem;
+  }
+
+  .activity-header h1 {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .published path,
+  .icon path {
+    fill: $snapshot-color;
+  }
+
+  .title {
+    color: $snapshot-color;
+  }
+
+  @include specific-action-button-color($snapshot-color, $snapshot-secondary-color);
+
+  @include specific-activity-button-color($snapshot-color, $snapshot-secondary-color);
+
+  @include specific-session-report-section($snapshot-color, $snapshot-secondary-color);
+
+  &.play .content {
+    margin-top: 8.5vw;
+
+    @media only screen and (orientation: portrait) {
+      margin-top: 20.5vw;
+    }
+  }
+
+  &.play .buttons {
+    display: flex;
+    max-width: 25rem;
+    margin: auto;
+  }
+
+  activity-header.student {
+    display: block;
+    margin-top: 8.5vw;
+  }
+
+  @media only screen and (orientation: portrait) {
+    activity-header.student {
+      margin-top: 20.5vw;
+    }
+  }
+}
+
+#snapshot {
+  @include activity-section-button-color($snapshot-color);
+
+  .layer-indication {
+    top: 1.1rem;
+    right: 2.5rem;
+  }
+}
+
+.snapshot-yes-icon-small svg {
+  width: 3.5rem;
+  height: 7rem;
+
+  path {
+    fill: $snapshot-yes;
+  }
+}
+
+.snapshot-no-icon-small svg {
+  width: 3.5rem;
+  height: 7rem;
+
+  path {
+    fill: $snapshot-no;
+  }
+}
+
+yes-no-donut {
+  margin-top: 4.438rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "submit_button";
+@import "yes_no_donut_chart";
+@import "preview_content";
+@import "snapshot_session_report";

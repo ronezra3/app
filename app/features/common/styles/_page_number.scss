@@ -1,0 +1,17 @@
+page-number {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.page-number-label {
+  font-family: Alef; 
+  font-style: italic;
+  font-size: 0.882rem;
+  color: #a5a6a6;
+}
+
+.page-number-icon {
+  width: 0.813rem;
+  height: 1rem;
+}

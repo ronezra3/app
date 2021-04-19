@@ -1,0 +1,16 @@
+<view class="gray-view missing-students">
+  <navigation-bar>
+    <left-buttons>
+      <back-button></back-button>
+    </left-buttons>
+
+    <nav-bar-title>
+      <class-header-title class-info="$ctrl.classInfo" show-details="true"></class-header-title>
+      <span class="extended-title">{{'left_session' | translate}} ({{$ctrl.getMissingCount()}})</span>
+    </nav-bar-title>
+  </navigation-bar>
+
+  <content>
+    <missing-students-list></missing-students-list>
+  </content>
+</view>

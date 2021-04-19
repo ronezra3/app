@@ -1,0 +1,13 @@
+<view class="light-view flex-view snapshot">
+  <activity-nav-bar></activity-nav-bar>
+
+  <activity-enrich-preview-footer activity="$ctrl.activity" type="snapshot" get-specific-data="$ctrl.getSpecificData()"
+                                  is-valid="$ctrl.form.$valid"></activity-enrich-preview-footer>
+
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+      <preview-header type="snapshot" is-required="true" field-name="question" activity="$ctrl.activity" form="$ctrl.form"></preview-header>
+    </form>
+    <snapshot-preview-content></snapshot-preview-content>
+  </content>
+</view>

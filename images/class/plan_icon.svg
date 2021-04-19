@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447.33 491.37">
+  <defs>
+    <style>.cls-1 {
+      isolation: isolate;
+    }
+
+    .plan .cls-2, .plan .cls-4 {
+      fill: #dde6e0;
+    }
+
+    .plan .cls-2 {
+      opacity: 0.6;
+      mix-blend-mode: multiply;
+    }
+
+    .plan .cls-3 {
+      fill: #b167c2;
+    }
+
+    .plan .cls-5 {
+      fill: #f7f7f7;
+    }
+
+    .plan .cls-6 {
+      fill: #dae0dc;
+    }</style>
+  </defs>
+  <title>iconsGrid</title>
+  <g class="plan cls-1">
+    <g id="Layer_1" data-name="Layer 1">
+      <ellipse class="cls-2" cx="224.38" cy="474.17" rx="219.77" ry="17.2"/>
+      <path class="cls-3"
+            d="M376.66,374.73c-7.07,0-10.7-3-13.9-5.64-2.94-2.43-5.26-4.34-10.29-4.34s-7.35,1.92-10.29,4.34c-3.2,2.64-6.83,5.64-13.89,5.64s-10.69-3-13.9-5.64c-2.94-2.43-5.26-4.34-10.29-4.34s-7.35,1.92-10.29,4.34c-3.2,2.64-6.83,5.64-13.9,5.64s-10.69-3-13.9-5.64c-2.94-2.43-5.26-4.34-10.29-4.34a2.83,2.83,0,1,1,0-5.67c7.06,0,10.69,3,13.9,5.64,2.94,2.43,5.26,4.34,10.29,4.34s7.35-1.92,10.29-4.34c3.2-2.64,6.83-5.64,13.9-5.64s10.69,3,13.9,5.64c2.94,2.43,5.26,4.34,10.29,4.34s7.35-1.92,10.29-4.34c3.2-2.64,6.83-5.64,13.9-5.64s10.69,3,13.9,5.64c2.94,2.43,5.26,4.34,10.29,4.34s7.35-1.92,10.29-4.34c3.2-2.64,6.83-5.64,13.9-5.64a2.83,2.83,0,1,1,0,5.67c-5,0-7.35,1.92-10.29,4.34C387.36,371.74,383.73,374.73,376.66,374.73Z"/>
+      <rect class="cls-4" x="2.82" y="143.53" width="443.13" height="85.18"
+            transform="translate(-65.88 213.28) rotate(-45.02)"/>
+      <rect class="cls-3" x="112.24" y="240.38" width="7.56" height="29.27"
+            transform="translate(-146.37 156.82) rotate(-45.02)"/>
+      <rect class="cls-3" x="101.16" y="251.46" width="7.56" height="29.27"
+            transform="translate(367.34 379.95) rotate(134.98)"/>
+      <path class="cls-3"
+            d="M99.09,260.37h0a3.78,3.78,0,0,1,3.78,3.78v40.26a0,0,0,0,1,0,0H95.31a0,0,0,0,1,0,0V264.16A3.78,3.78,0,0,1,99.09,260.37Z"
+            transform="translate(368.89 411.91) rotate(134.98)"/>
+      <path class="cls-3"
+            d="M154.46,205h0a3.78,3.78,0,0,1,3.78,3.78V249a0,0,0,0,1,0,0h-7.56a0,0,0,0,1,0,0V208.75A3.78,3.78,0,0,1,154.46,205Z"
+            transform="translate(424.2 278.18) rotate(134.98)"/>
+      <rect class="cls-3" x="134.38" y="218.21" width="7.56" height="29.27"
+            transform="translate(400.53 299.71) rotate(134.98)"/>
+      <rect class="cls-3" x="123.31" y="229.29" width="7.56" height="29.27"
+            transform="translate(389.47 326.46) rotate(134.98)"/>
+      <rect class="cls-3" x="167.61" y="184.97" width="7.56" height="29.27"
+            transform="translate(-90.95 179.74) rotate(-45.02)"/>
+      <rect class="cls-3" x="156.53" y="196.05" width="7.56" height="29.27"
+            transform="translate(422.66 246.21) rotate(134.98)"/>
+      <path class="cls-3"
+            d="M209.83,149.56h0a3.78,3.78,0,0,1,3.78,3.78V193.6a0,0,0,0,1,0,0h-7.56a0,0,0,0,1,0,0V153.34A3.78,3.78,0,0,1,209.83,149.56Z"
+            transform="translate(479.52 144.44) rotate(134.98)"/>
+      <rect class="cls-3" x="189.75" y="162.8" width="7.56" height="29.27"
+            transform="translate(455.85 165.97) rotate(134.98)"/>
+      <rect class="cls-3" x="178.68" y="173.89" width="7.56" height="29.27"
+            transform="translate(444.79 192.72) rotate(134.98)"/>
+      <rect class="cls-3" x="222.97" y="129.56" width="7.56" height="29.27"
+            transform="translate(-35.53 202.67) rotate(-45.02)"/>
+      <rect class="cls-3" x="211.9" y="140.64" width="7.56" height="29.27"
+            transform="translate(477.98 112.47) rotate(134.98)"/>
+      <path class="cls-3"
+            d="M265.2,94.15h0A3.78,3.78,0,0,1,269,97.93v40.26a0,0,0,0,1,0,0h-7.56a0,0,0,0,1,0,0V97.93A3.78,3.78,0,0,1,265.2,94.15Z"
+            transform="translate(534.83 10.7) rotate(134.98)"/>
+      <rect class="cls-3" x="245.12" y="107.4" width="7.56" height="29.27"
+            transform="translate(511.16 32.23) rotate(134.98)"/>
+      <rect class="cls-3" x="234.05" y="118.48" width="7.56" height="29.27"
+            transform="translate(500.1 58.98) rotate(134.98)"/>
+      <rect class="cls-3" x="278.34" y="74.15" width="7.56" height="29.27"
+            transform="translate(19.9 225.59) rotate(-45.02)"/>
+      <rect class="cls-3" x="267.27" y="85.23" width="7.56" height="29.27"
+            transform="translate(533.29 -21.27) rotate(134.98)"/>
+      <path class="cls-3"
+            d="M320.57,38.74h0a3.78,3.78,0,0,1,3.78,3.78V82.78a0,0,0,0,1,0,0h-7.56a0,0,0,0,1,0,0V42.52a3.78,3.78,0,0,1,3.78-3.78Z"
+            transform="translate(590.15 -123.04) rotate(134.98)"/>
+      <rect class="cls-3" x="300.49" y="51.99" width="7.56" height="29.27"
+            transform="translate(566.48 -101.51) rotate(134.98)"/>
+      <rect class="cls-3" x="289.42" y="63.07" width="7.56" height="29.27"
+            transform="translate(555.42 -74.76) rotate(134.98)"/>
+      <rect class="cls-5" x="184.09" y="-7.6" width="62.42" height="369.66"
+            transform="translate(-62.26 204.15) rotate(-45)"/>
+      <polygon class="cls-6" points="386.38 332.44 370.52 349.3 323.93 329.99 368.07 285.85 386.38 332.44"/>
+      <rect class="cls-2" x="205.38" y="-7.6" width="19.84" height="369.66"
+            transform="translate(-62.26 204.15) rotate(-45)"/>
+      <path class="cls-3" d="M385.76,332.92L393,350.54a3.24,3.24,0,0,1-4.12,4.27l-17.53-6.5"/>
+      <path class="cls-6"
+            d="M58.71,28.55h36.9a12.76,12.76,0,0,1,12.76,12.76v8.31a0,0,0,0,1,0,0H46a0,0,0,0,1,0,0V41.31A12.76,12.76,0,0,1,58.71,28.55Z"
+            transform="translate(-5.04 66.01) rotate(-45)"/>
+    </g>
+  </g>
+</svg>

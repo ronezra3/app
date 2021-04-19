@@ -1,0 +1,84 @@
+$title-dark-color: #248350;
+$activities-header-color: #3a3a3a;
+$activities-text-color: #858484;
+
+.class-menu {
+  margin-top: 1vw;
+
+  .main-title {
+    font-style: italic;
+    color: $title-dark-color;
+    font-size: 3rem;
+    text-align: center;
+    margin:0;
+  }
+  .buttons-container {
+    text-align: center;
+    max-width: 65rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .button-header {
+    font-style: italic;
+    color: $activities-header-color;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 1.563rem;
+  }
+  .text-container {
+    text-align: right;
+  }
+  .icon {
+    float: left;
+  }
+
+  .menu-button {
+    width: 28rem;
+    height: 10rem;
+    margin-top: 1vw;
+    padding-left: 1.875rem;
+
+    svg {
+      width: 6.313rem;
+      height: 7.063rem;
+    }
+  }
+
+  .button-text {
+    font-style: italic;
+    color: $activities-text-color;
+    font-size: 1.2rem;
+    line-height: 100%;
+    text-align: left;
+    padding-left: 1.563rem;
+  }
+
+  .ng-click-active.menu-button {
+    border-radius: 0.625rem;
+    border-width: 0.063rem;
+    border-style: solid;
+    padding-left: 1.812rem;
+  }
+
+  .review, .manage {
+    margin-top: 1vw;
+  }
+
+  .teach, .manage {
+    margin-left: 0.875rem;
+  }
+
+  .ng-click-active.plan {
+    border-color: rgba(176, 103, 194, 0.5);
+  }
+  .ng-click-active.teach {
+    border-color: rgba(241, 100, 33, 0.5);
+  }
+  .ng-click-active.review {
+    border-color: rgba(0, 207, 255, 0.5);
+  }
+  .ng-click-active.manage {
+    border-color: rgba(186, 213, 57, 0.5);
+  }
+}

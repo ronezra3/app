@@ -1,0 +1,29 @@
+<label class="index">{{$ctrl.answerNumber | numberToLetter | translate}}.</label>
+
+<correct-answer-picker question="$ctrl.question" answer="$ctrl.answer"></correct-answer-picker>
+
+<div class="input-container">
+  <textarea class="feedback-input answer-input activity-input" style="direction: rtl" ng-show="$ctrl.immediateFeedback"
+            ng-keypress="$ctrl.closeFeedbackInput($event)" ng-class="{'feedback-shown' : $ctrl.feedbackShown}"
+            ng-model="$ctrl.answer.specificFeedback" focus-on="{{$ctrl.feedbackShown}}"
+            placeholder="{{'insert_specific_feedback' | translate}}"></textarea>
+
+  <textarea ng-class="{'immediate-feedback-enabled': $ctrl.immediateFeedback}"
+            class="answer-input activity-input" style="direction: rtl" ng-model="$ctrl.answer.content"
+            ng-readonly="$ctrl.question.type === 'boolean'"
+            ng-required="!$ctrl.isInSession()"
+            placeholder="{{$ctrl.isInSession() ?  ($ctrl.answerNumber | numberToLetter) : 'assess-answer-placeholder' | translate}}"
+            focus-on="{{$ctrl.answer.isNew}}"></textarea>
+</div>
+
+<button class="feedback-button" ng-show="$ctrl.immediateFeedback"
+        ng-class="{'has-feedback' : $ctrl.answer.specificFeedback, 'feedback-shown' : $ctrl.feedbackShown}"
+        ng-click="$ctrl.feedbackShown = !$ctrl.feedbackShown">
+  <span ng-repeat="i in [1,2,3]" class="feedback-circle"></span>
+</button>
+
+<button class="delete" ng-click="$ctrl.questionService.removeAnswer($ctrl.question, $ctrl.answer)"
+        ng-disabled="!$ctrl.questionService.canDelete($ctrl.question)"
+        ng-hide="$ctrl.question.type === 'boolean'">
+  <ng-include class="delete-icon" src="'images/x-icon.png'"></ng-include>
+</button>

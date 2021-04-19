@@ -1,0 +1,5 @@
+<label for="assessMinutes" class="assess-preview-time-container">
+  <input id="assessMinutes" type="number" class="assess-preview-time-input" ng-model="$ctrl.assessMinutes" min="1" ng-maxlength="2" ng-model-options="{ getterSetter: true }"
+         ng-focus="$ctrl.onFocus($event)">
+  <span class="assess-preview-time-text">{{'minutes-shortened' | translate}}</span>
+</label>

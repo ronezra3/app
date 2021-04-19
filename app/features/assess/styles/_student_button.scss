@@ -1,0 +1,28 @@
+.student-button {
+  @include transparent-button;
+  width: 12rem;
+  height: 2.875rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.thumbnail {
+  border: 0.125rem solid #848f92;
+  border-radius: 100%;
+  max-height: 2rem;
+  max-width: 2rem;
+}
+
+.name {
+  font-family: Alef;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $assess-dashboard-sub-header-color;
+  margin-left: 0.25rem;
+}
+
+.student-button.ng-click-active {
+  background-color: #d5d5d4;
+}

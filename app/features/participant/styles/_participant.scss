@@ -1,0 +1,65 @@
+$half-avatar-width: 4.75rem;
+$participant-color: #FDA53E;
+$participant-secondary-color: #FDBC4D;
+$avatar-border-color-participant-final: #FD9636;
+
+.participant-item {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.75rem;
+
+  svg {
+    width: 2 * $half-avatar-width;
+    height: 2 * $half-avatar-width;
+  }
+}
+
+.participant-first-seria {
+  margin-left: -1 * $half-avatar-width;
+}
+
+.participant {
+  &.are-you-sure {
+    @include are-you-sure-color($participant-color, $participant-secondary-color)
+  }
+
+  .activity-header .icon svg {
+    width: 2.188rem;
+    height: 2.313rem;
+  }
+
+  .published path,
+  .icon path {
+    fill: $participant-color;
+  }
+
+  .title {
+    color: $participant-color;
+  }
+
+  @include specific-activity-button-color($participant-color, $participant-secondary-color);
+
+  @include specific-action-button-color($participant-color, $participant-secondary-color);
+
+  &.session-repeat-item-activity-icon svg {
+    height: 1.8rem;
+    width: 1.6rem;
+
+    path {
+      fill: $participant-color;
+    }
+  }
+}
+
+#participant {
+  @include activity-section-button-color($participant-color);
+
+  .layer-indication {
+    top: 0.6rem;
+    right: 3rem;
+  }
+}
+
+@import "participant_searching_for_student";
+@import "participant_final";
+@import "preview_content";

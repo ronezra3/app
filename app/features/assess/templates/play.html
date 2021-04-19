@@ -1,0 +1,19 @@
+<view class="assess play light-view flex-view" hardware-back-button-enabled="false">
+  <div class="student-top-gap"></div>
+  <content class="padded" scrollable="true">
+    <activity-header type="assess" field="$ctrl.activity.title"></activity-header>
+    <div class="assess-solve-student-questions-wrapper">
+      <ol class="assess-solve-student-questions">
+        <li class="assess-student-question" ng-repeat="question in $ctrl.activity.questions">
+          <student-question question="question" immediate-feedback="$ctrl.activity.immediateFeedback" student-assess="$ctrl.studentAssess"></student-question>
+        </li>
+      </ol>
+      <!-- <aside class="assess-solve-progress-box">
+        <student-progress student-assess="$ctrl.studentAssess"></student-progress>
+      </aside> -->
+    </div>
+    <nav class="activity-buttons-nav padded">
+        <assess-submit-button class="primary" student-assess="$ctrl.studentAssess"></assess-submit-button>
+      </nav>
+  </content>
+</view>

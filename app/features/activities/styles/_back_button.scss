@@ -1,0 +1,29 @@
+$activity-back-button-color: #fff; // #9B9B9B;
+$back-button-gray-pressed-background: #d5d5d4;
+
+activity-back-button {
+  display: flex;
+
+  button {
+    height:2vw;
+    width:1.6vw;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125rem;
+    color: $activity-back-button-color;
+
+    svg {
+      vertical-align: initial;
+
+      path {
+        fill: $activity-back-button-color;
+      }
+    }
+
+    span {
+      vertical-align: bottom;
+    }
+
+
+  }
+}

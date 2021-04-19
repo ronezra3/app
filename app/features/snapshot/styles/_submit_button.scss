@@ -1,0 +1,72 @@
+snapshot-submit-button {
+  flex: 1;
+
+  &:first-child {
+    margin-right: 0.5rem;
+  }
+}
+
+snapshot-submit-button, snapshot-preview-content {
+  .container {
+    border: 0.125rem solid;
+    border-radius: 50%;
+    max-width: 10.375rem;
+    width: 100%;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%; /* initial ratio of 1:1*/
+    }
+
+    svg {
+      width: 3.813rem;
+      height: 3rem;
+    }
+
+    svg, circular-progress-bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    &.yes {
+      border-color: #EEF0EF;
+      background-color: #EEF0EF;
+
+      path {
+        fill: $snapshot-yes;
+      }
+
+      &.ng-click-active, &.loading {
+        // background-color: $snapshot-yes;
+      }
+
+      &.ng-click-active path {
+        fill: white;
+      }
+
+    }
+
+    &.no {
+      border-color: #EEF0EF;
+      background-color: #EEF0EF;
+
+      path {
+        fill: $snapshot-no;
+      }
+
+      &.ng-click-active, &.loading {
+        // background-color: $snapshot-no;
+      }
+
+      &.ng-click-active path {
+          fill: white;
+        }
+    }
+  }
+}

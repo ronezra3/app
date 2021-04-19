@@ -1,0 +1,15 @@
+<div class="circle">
+  <img class="image" csp-src="{{selectedStudent.getAvatarUrl()}}"/>
+</div>
+<span class="name">{{selectedStudent.getFullName()}}</span>
+
+<div class="questions">
+  <div class="question" ng-repeat="question in selectedStudentQuestions"
+       ng-class="{'correct': question.status === 'correct', 'incorrect': question.status === 'incorrect'}">
+    Q{{question.index}}
+  </div>
+</div>
+
+<footer>
+  <button class="primary action-button" ng-click="closeThisDialog()" type="button">{{'close' | translate}}</button>
+</footer>

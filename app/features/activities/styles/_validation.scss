@@ -1,0 +1,15 @@
+$invalid-color: rgba(244, 67, 54, 1);
+$invalid-color-faded: rgba(244, 67, 54, 0.2);
+
+.validation-message-error {
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.931rem;
+  color: $invalid-color;
+  text-align: left;
+}
+
+.activity-input.ng-invalid.ng-touched {
+  box-shadow: 0 2px 2px $invalid-color-faded;
+}

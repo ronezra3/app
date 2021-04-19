@@ -1,0 +1,73 @@
+circular-progress-bar {
+  width: 3.063rem;
+  height: 3.063rem;
+  margin: auto;
+  display: block;
+
+  .outer-spin {
+    width: 3.063rem;
+    height: 3.063rem;
+    margin: auto;
+    border-radius: 50%;
+    animation: spin .5s infinite linear;
+    border: 5px solid $main-color;
+    border-top: 5px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    padding-top: 0.33rem;
+
+    .inner-spin {
+      border: 5px solid $main-color;
+      border-top: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-radius: 50%;
+      box-shadow: 0 0 15px $secondary-color;
+      width: 1.8rem;
+      height: 1.8rem;
+      margin: 0 auto;
+      position: relative;
+      animation: spinoff 0.25s infinite linear;
+    }
+  }
+
+  .outer-spin.downloading {
+    display: none;
+  }
+}
+
+.circular-text {
+  font-family: Alef;
+  font-style: italic;
+  font-size: 0.999rem;
+  color: rgb(255, 255, 255) !important;
+}
+
+.white .outer-spin {
+  border-right-color: white;
+  border-bottom-color: white;
+
+  .inner-spin {
+    border-right-color: white;
+    border-bottom-color: white;
+    box-shadow: 0 0 15px white;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinoff {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}

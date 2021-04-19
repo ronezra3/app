@@ -1,0 +1,71 @@
+$assess-color: #FDA53E;
+$assess-secondary-color: #FDBC4D;
+
+.assess {
+  .activity-header .icon svg {
+    width: 2.125rem;
+    height: 2.688rem;
+  }
+
+  .icon path {
+    fill: $assess-color;
+  }
+
+  .published path {
+    fill: $assess-color;
+  }
+
+  .title {
+    color: $assess-color;
+  }
+
+  @include specific-activity-button-color($assess-color, $assess-secondary-color);
+
+  @include specific-session-report-section($assess-color, $assess-secondary-color);
+
+  &.session-repeat-item-activity-icon svg {
+    height: 1.75rem;
+    width: 1.5rem;
+
+    path {
+      fill: $assess-color;
+    }
+  }
+
+  &.are-you-sure {
+    @include are-you-sure-color($assess-color, $assess-secondary-color);
+  }
+
+  @include specific-action-button-color($assess-color, $assess-secondary-color);
+
+
+}
+
+#assess {
+  @include activity-section-button-color($assess-color);
+
+  .layer-indication {
+    top: 0.7rem;
+    right: 2.78rem;
+  }
+}
+
+assess-publish-button {
+  @extend activity-publish-button;
+}
+
+assess-save-button {
+  @extend activity-save-button;
+}
+
+@import "assess_start";
+@import "assess_dashboard";
+@import "assess_play";
+@import "assess_question_input";
+@import "assess_answer_button";
+@import "assess_report";
+@import "asses_play_intro";
+@import "student_question";
+@import "correct_question_indicator";
+@import "student_progress";
+@import "assess_session_report";

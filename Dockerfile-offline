@@ -1,0 +1,5 @@
+FROM localhost:5000/clientapp
+WORKDIR /usr/share/nginx/html
+RUN sed -i "s/ENV_ENDPOINT_LMS/${ENV_ENDPOINT_LMS}/g" app-bundle.js
+RUN sed -i "s/ENV_ENDPOINT_SERVER/${ENV_ENDPOINT_SERVER}/g" app-bundle.js
+RUN sed -i "s/ENV_ENDPOINT_REALTIME/${ENV_ENDPOINT_REALTIME}/g" app-bundle.js

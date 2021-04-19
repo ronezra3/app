@@ -1,0 +1,1 @@
+{"version":3,"file":"BookActivityFactory.js","sourceRoot":"","sources":["BookActivityFactory.ts"],"names":[],"mappings":";;AAAA,aAAa;AACb,sBAA6B,SAAS,EAAE,GAAG;IACzC,IAAI,OAAO,GAAG,GAAG,CAAC,WAAW,GAAG,qBAAqB,CAAC;IACtD,OAAO,SAAS,CAAC,OAAO,EAAE,EAAC,EAAE,EAAE,KAAK,EAAC,CAAC,CAAC;AACzC,CAAC;AAHD,oCAGC"}

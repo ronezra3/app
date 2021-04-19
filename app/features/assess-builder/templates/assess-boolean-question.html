@@ -1,0 +1,10 @@
+<div class="assess-question-title-container">
+  <textarea class="question-input" style="direction: rtl" ng-model="$ctrl.question.content"
+            ng-required="!$ctrl.isInSession()"
+            placeholder="{{($ctrl.isInSession() ? 'default-assess-boolean-question' :
+             'assess-boolean-question-placeholder') | translate}}"></textarea>
+</div>
+
+<assess-answer ng-repeat="i in [0,1]" answer="$ctrl.question.answers[$index]"
+               question="$ctrl.question" answer-number="{{$index + 1}}" immediate-feedback="$ctrl.immediateFeedback">
+</assess-answer>

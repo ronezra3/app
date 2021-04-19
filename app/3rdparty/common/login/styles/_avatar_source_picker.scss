@@ -1,0 +1,57 @@
+.avatar-source-picker {
+  position: fixed;
+  width: 15.625rem;
+  height: 10.9375rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 18.75rem;
+  background-color: white;
+}
+
+.avatar-source-picker .arrow {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  position: absolute;
+  left: 45%;
+  top: -7%;
+}
+
+.avatar-source-picker .header {
+  height: 3rem;
+  padding-left: 1.1875rem;
+   font-family: Alef;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1rem;
+  color: #15404e;
+  padding-top: 7%;
+}
+
+.avatar-source-picker button {
+  display: block;
+  height: 3rem;
+  margin: auto;
+  width: 90%;
+  padding-left: 1.1875rem;
+  font-family: Alef;
+  font-style: italic;
+  font-size: 1rem;
+  color: #15404e;
+  text-align: left;
+}
+
+.avatar-source-picker button.ng-click-active:enabled {
+  background-color: #f1f0ef;
+  border-radius: 30px;
+}
+
+@media only screen and (max-width: $mini-tablet-max-screen-width) and (orientation: portrait),
+screen and (max-width: $mini-tablet-max-screen-height) and (orientation: landscape) {
+  .avatar-source-picker {
+    top: 14rem;
+  }
+}

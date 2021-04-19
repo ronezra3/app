@@ -1,0 +1,16 @@
+<view class="light-view flex-view story">
+  <activity-nav-bar></activity-nav-bar>
+
+  <nav class="activity-buttons-nav padded">
+      <activity-remove-button class="secondary" type="story" ng-if="$ctrl.activity.id"
+                              activity="$ctrl.activity"></activity-remove-button>
+      <story-save-button class="primary" activity="$ctrl.activity" type="story"
+                          specific-data="$ctrl.getSpecificData()" is-valid="$ctrl.form.$valid"></story-save-button>
+    </nav>
+
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+      <story-preview-content is-required="true" form="$ctrl.form" activity="$ctrl.activity"></story-preview-content>
+    </form>
+  </content>
+</view>

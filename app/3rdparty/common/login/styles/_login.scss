@@ -1,0 +1,105 @@
+.login {
+  login-background {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media only screen and (orientation: portrait) {
+        height: 100%;
+        width: auto;
+      }
+
+      @media only screen and (orientation: landscape) {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    padding: 1rem;
+
+    ui-view {
+      margin: auto;
+      width: 100%;
+      max-width: 25rem;
+    }
+
+    .full-logo {
+      position: absolute;
+      margin: auto;
+      right: 0;
+      left: 0;
+      top: -1.8rem;
+      max-height: 7rem;
+    }
+
+    @mixin login-button() {
+      width: 100%;
+      height: 3.125rem;
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+    }
+
+    .action-button {
+      @include login-button();
+    }
+
+    .login-account-text {
+      @include horizontal-center();
+      color: #4a4a4a;
+      font-style: italic;
+      margin-top: 1.875rem;
+    }
+
+    .methodic-logo {
+      height: 19px;
+      position: relative;
+      top: 4px;
+      margin-left: 5px;
+    }
+
+    .login-details {
+      background-color: hsla(0,0%,100%,.9);
+      padding: 1.825rem 1.875rem 1.8125rem;
+      border-radius: 4px;
+      position: relative;
+      margin-top: 3rem;
+
+      > .login-input:first-of-type {
+        margin-top: 1.3125rem;
+        font-family:Calibri;
+      }
+    }
+  }
+}
+
+.login-input {
+  margin-top: 0.5rem;
+  width: 100%;
+  background: #EEF0EF;
+  &[name="username"] {
+    text-transform: lowercase;
+
+    &::-webkit-input-placeholder {
+      text-transform: none;
+    }
+  }
+}
+
+@import "avatar_picker";
+@import "register";
+@import "avatar_source_picker";
+@import "terms_of_use";

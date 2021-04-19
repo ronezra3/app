@@ -1,0 +1,35 @@
+$light-view-background: transparent;
+$gray-view-background: transparent; 
+$beige-view-background: transparent;
+
+.view {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.reader {
+  //background-image:none;
+}
+
+.flex-view {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .view {
+    position: absolute;
+  }
+}
+
+.light-view {
+  background-color: $light-view-background;
+}
+
+.gray-view {
+  background-color: $gray-view-background;
+}
+
+.beige-view {
+  background-color: $beige-view-background;
+}

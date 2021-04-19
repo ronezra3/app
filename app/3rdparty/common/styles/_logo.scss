@@ -1,0 +1,20 @@
+logo {
+  height: 2.7rem;
+  display: block;
+}
+
+.logo {
+  margin-right: 1rem;
+
+  svg {
+    max-height: 2.7rem;
+    max-width: 2.7rem;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  @media only screen and (max-width: $mini-tablet-max-screen-width) {
+    display: none;
+  }
+}

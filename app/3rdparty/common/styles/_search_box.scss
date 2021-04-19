@@ -1,0 +1,43 @@
+
+.search-box {
+  border-radius: 1.5rem;
+  border: 0;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.search-box.searching {
+  border-color: #515151;
+}
+
+.search-box-input-wrapper {
+  overflow: hidden;
+  height: 100%;
+}
+
+.search-box input {
+  display: inline-block;
+  @include padding-left(0.8125rem);
+  @include padding-right(0.2rem);
+  height: 100%;
+  width: 100%;
+  color: #abaaa9;
+  background: transparent;
+   font-family: Alef;
+   font-weight: 600; font-style: italic;
+  font-size: 1rem;
+  @include text-align(left);
+  @include direction;
+}
+
+.search-box-icon {
+ @include float(right);
+  display: inline-block;
+  height: 100%;
+ @include padding-right(0.688rem);
+}
+
+.search-box svg{
+  @include middle-align;
+}

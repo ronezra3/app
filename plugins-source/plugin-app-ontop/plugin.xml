@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:tools="http://schemas.android.com/tools"
+        id="learni-appontop"
+        version="0.8.0">
+
+  <name>Appontop</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/appontop.js" target="js/appontop.js"/>
+
+  <js-module src="www/appontop.js" name="appontop">
+    <clobbers target="appontop"/>
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Appontop">
+        <param name="android-package" value="com.learni.plugins.appontop.Appontop"/>
+      </feature>
+      <feature name="PackageUsageStats">
+        <param name="android-package" value="com.learni.plugins.appontop.PackageUsageStats"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.GET_TASKS"/>
+      <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+                       tools:ignore="ProtectedPermissions"/>
+    </config-file>
+
+    <source-file src="src/android/Appontop.java" target-dir="src/com/learni/plugins/appontop"/>
+    <source-file src="src/android/PackageUsageStats.java" target-dir="src/com/learni/plugins/appontop"/>
+    <source-file src="src/android/ApplicationManagers/Legacy.java"
+                 target-dir="src/com/learni/plugins/appontop/ApplicationManagers"/>
+    <source-file src="src/android/ApplicationManagers/SDK21.java"
+                 target-dir="src/com/learni/plugins/appontop/ApplicationManagers"/>
+    <source-file src="src/android/ApplicationManagers/SDK22.java"
+                 target-dir="src/com/learni/plugins/appontop/ApplicationManagers"/>
+    <source-file src="src/android/ApplicationManagers/SDK23.java"
+                 target-dir="src/com/learni/plugins/appontop/ApplicationManagers"/>
+  </platform>
+</plugin>

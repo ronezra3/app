@@ -1,0 +1,23 @@
+back-button {
+  display: flex;
+
+  button {
+    border-radius: 50%;
+
+    svg {
+      width: 1.4vw;
+      height: 2vw;
+    }
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  back-button {
+    button {
+      svg {
+        width: 2.1vw;
+        height: 3vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.edit-profile {
+  z-index: 15;
+
+  & ~ .popup-overlay {
+    z-index: 16;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-name-label {
+    color: #888e90;
+    font-size: 1.124rem;
+    line-height: 2.666;
+  }
+
+  .password-inputs-container {
+    width: 100%;
+    margin-top: 1.3125rem;
+  }
+}

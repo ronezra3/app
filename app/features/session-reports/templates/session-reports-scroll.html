@@ -1,0 +1,11 @@
+<infinite-scroll on-infinite="loadMoreItems()" distance="20" is-loading="isLoading" class="session-reports-items">
+  <session-report-item ng-repeat="session in sessions track by session.id | orderBy:'createdAt':true"
+                       class="session-report-item"
+                       session="session"
+                       members-count="membersCount"></session-report-item>
+  <div ng-if="!isLoading && sessions.length === 0" class="empty-mode">
+    <h2>{{ "session_reports_empty_mode_title" | translate }}</h2>
+  </div>
+  <loader class="loader-container" ng-show="isLoading"></loader>
+</infinite-scroll>
+

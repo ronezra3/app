@@ -1,0 +1,6 @@
+<div class="book-location-container">
+  <svg-icon src="images/page_icon.png"></svg-icon>
+  <span class="book-location-book-name" ng-if="false">{{ctrl.book.title}}</span>
+  <span class="book-location-page" ng-if="ctrl.minPage">{{'page-shortened' |  translate}}{{ctrl.minPage}}</span>
+  <span class="book-location-page" ng-if="ctrl.maxPage && ctrl.minPage !== ctrl.maxPage">-{{'page-shortened' |  translate}}{{ctrl.maxPage}}</span>
+</div>

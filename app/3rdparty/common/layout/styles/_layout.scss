@@ -1,0 +1,61 @@
+/* fonts */
+@font-face {
+  font-family: "Alef";
+  src: url(../fonts/Alef-regular.woff);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Alef";
+  src: url(../fonts/Alef-bold.woff);
+  font-weight: bold;
+}
+
+/** media queries constants **/
+
+// iPad resolution - 1px - 20px (status-bar height)
+$mini-tablet-max-screen-width: 747px;
+$mini-tablet-max-screen-height: 1003px;
+
+// iPhone6Plus resolution + 1px
+$smart-phone-max-screen-width: 415px;
+$smart-phone-max-screen-height: 737px;
+
+$smart-phone-keyboard-open-max-screen-height: 390px;
+
+body {
+    font-family: "Alef";
+    background-image: url(../images/GreenTop.png), url(../images/GreyTop.png), url(../images/GreenBottom.png), url(../images/GreyBottom.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, contain, contain, contain;
+    background-position: top left, top left, bottom right, bottom left;
+}
+
+@media only screen and (orientation: portrait) { 
+    body {
+        background-image: url(../images/GreenTopM.png), url(../images/GreyTopM.png), url(../images/GreenBottomM.png), url(../images/GreyBottomM.png);
+    }
+}
+
+.wrap-panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin horizontal-center() {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@import "animations";
+@import "navigation_bar";
+@import "back_button";
+@import "side_bar";
+@import "side_bars";
+@import "content";
+@import "view";
+@import "dialog";
+@import "hamburger_button";
+@import "popup";
+@import "checkbox";

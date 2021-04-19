@@ -1,0 +1,59 @@
+$not-attending-color: #ff0356;
+$attending-color: $main-color;
+
+attendance-stats {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  display: block;
+
+  .attendance-stat.not-attending {
+    color: $not-attending-color;
+    .person .head, .person .body {
+      border-color: $not-attending-color;
+      background-color: $not-attending-color;
+    }
+  }
+
+  .attendance-stat.attending {
+    @include margin-right(3rem);
+
+    color: $attending-color;
+    .person .head, .person .body {
+      border-color: $main-color;
+      background-color: $main-color;
+    }
+  }
+
+  .attendance-stat {
+    display: inline;
+    font-family: Alef; 
+    font-style: italic;
+
+    .number {
+      display: inline-block;
+      font-size: 7rem;
+    }
+
+    .person {
+      display: inline-block;
+      @include margin-right(0.5rem);
+    }
+
+    .person .head {
+      border-radius: 50%;
+      border: 5px solid;
+      width: 0.7rem;
+      height: 0.7rem;
+      margin: auto;
+    }
+
+    .person .body {
+      border: 1px solid;
+      width: 1.2rem;
+      height: 0.7rem;
+      margin-top: 2px;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+    }
+  }
+}

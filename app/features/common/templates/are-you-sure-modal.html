@@ -1,0 +1,14 @@
+<header>
+  <ng-include src="'3rdparty/common/images/alert.png'"></ng-include>
+</header>
+
+<div>{{message | translate}}</div>
+<div ng-if="secondMessage">{{secondMessage | translate:translationData}}</div>
+
+<footer>
+    <click-once-button class="primary action-button" on-click="ctrl.yes()">
+        <span>{{'yes' | translate}}</span>
+        <loader></loader>
+      </click-once-button>
+  <button class="secondary action-button" ng-click="ctrl.no()">{{'no' | translate}}</button>
+</footer>

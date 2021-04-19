@@ -1,0 +1,1 @@
+{"version":3,"file":"EnrichPreviewFooter.js","sourceRoot":"","sources":["EnrichPreviewFooter.ts"],"names":[],"mappings":";;AAAA,IAAM,QAAQ,GAAG,+XAMhB,CAAC;AAEF;IAAA;QACE,aAAQ,GAAG,QAAQ,CAAC;QACpB,aAAQ,GAAS;YACf,IAAI,EAAE,GAAG;YACT,QAAQ,EAAE,GAAG;YACb,eAAe,EAAE,GAAG;YACpB,OAAO,EAAE,GAAG;SACb,CAAC;IACJ,CAAC;IAAD,kCAAC;AAAD,CAAC,AARD,IAQC;AARY,kEAA2B"}

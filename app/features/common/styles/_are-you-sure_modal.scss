@@ -1,0 +1,19 @@
+@mixin are-you-sure-color($primary-color, $secondary-color) {
+  header svg {
+    g path:first-child {
+      fill: $secondary-color;
+    }
+
+    path:last-child,
+    > path {
+      fill: $primary-color;
+    }
+  }
+}
+
+
+.are-you-sure {
+  div {
+    direction: rtl;
+  }
+}

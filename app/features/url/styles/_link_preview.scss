@@ -1,0 +1,52 @@
+$link-preview-border-color: #d8dbdd;
+
+link-preview button {
+  border-radius: 0 0 0.3125rem 0.3125rem;
+  box-shadow: 0 3px 4px 0 #d8dbdd;
+  height: calc(20vh + 2rem);
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  flex-direction: row-reverse;
+  display: flex;
+
+  &.ng-click-active {
+    background-color: rgba(241, 240, 239, 0.7);
+  }
+
+  article {
+    padding-left: 1rem;
+    flex: 1 1;
+
+    h2 {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.6rem;
+      line-height: 1;
+      margin: 0;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 0.7rem;
+      color: #515151;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  aside {
+    max-width: 25%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+

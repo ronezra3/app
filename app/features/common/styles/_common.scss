@@ -1,0 +1,81 @@
+* {
+  font-style: normal !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.replied-counter {
+  font-size: 1.311rem;
+  font-family: Calibri;
+  font-style: italic;
+  color: rgba(7, 23, 28, 0.7);
+  font-weight: 600;
+  line-height: 1.431;
+  text-align: center;
+}
+
+.replied-label {
+  font-family: Alef;
+  color: #6d7173;
+  font-size: 1.312rem;
+  font-weight: 400;
+  line-height: 1.429;
+  text-align: center;
+}
+
+.replied-number {
+  display: block;
+
+  .replied-counter {
+    font-size: 2.497rem;
+    font-family: Calibri;
+    font-weight: 400;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1rem;
+    margin-bottom: 0.6875rem;
+  }
+}
+
+.popup-modal {
+  background-color: rgba(7, 23, 28, 0.6);
+}
+
+.extended-title {
+  margin-left: 1.438rem;
+  font-family: Calibri;
+  font-size: 1.5vw;
+  font-weight: 300;
+  @include direction;
+
+  .clock svg {
+    height: 1.5vw;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .extended-title {
+    font-size: 3vw;
+
+    .clock svg {
+      height: 3vw;
+    }
+  }
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@import "page_number";
+@import "infinite_scroll";
+@import "is_correct";
+@import "circular_progress_bar";
+@import "are-you-sure_modal";
+@import "empty_mode";
+@import "animate_repeat";
+@import "loading_bar";

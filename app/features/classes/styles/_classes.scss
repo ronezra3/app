@@ -1,0 +1,84 @@
+.classes {
+  .school-name {
+    // font-size: 1.1rem;
+    // text-transform: capitalize;
+    // max-width: 28rem;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+
+    display: inline-block;
+    // margin-left: 3vw;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    max-width: 28rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @media only screen and (max-width: $mini-tablet-max-screen-width) {
+      display: none;
+    }
+
+
+  }
+
+  ul li .delete-icon {
+    svg {
+  
+      path {
+        fill: #b54141;
+      }
+    }
+  }
+
+  .logo {
+    display: block;
+
+    .square {
+      display: none;
+    }
+
+    .full {
+      max-height: 2.7rem;
+      height: 100%;
+
+      display: block;
+    }
+
+    @media only screen and (max-width: $smart-phone-max-screen-width) and (orientation: portrait),
+    only screen and (max-width: $smart-phone-max-screen-height) and (orientation: landscape) {
+      .square {
+        display: block;
+      }
+
+      .full {
+        display: none;
+      }
+    }
+  }
+
+  loader {
+    @media only screen and (max-width: $mini-tablet-max-screen-width) and (orientation: portrait) {
+      margin: 1.563rem 0 0 1.2rem;
+    }
+
+    @media only screen and (max-width: $smart-phone-max-screen-height) and (orientation: landscape) {
+      margin: 1rem 1rem 0 1rem;
+    }
+  }
+
+  @media only screen and (max-width: $smart-phone-max-screen-width) and (orientation: portrait) {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    loader {
+      margin: 1rem auto 0 auto;
+    }
+  }
+}
+
+@import "class_thumbnail";
+@import "create_class";
+@import "join_class";
+@import "add-class";

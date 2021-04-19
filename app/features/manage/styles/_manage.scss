@@ -1,0 +1,25 @@
+.manage-tabs {
+  border: 1px solid #e5e4e3;
+  width: 100%;
+  height: 4.25rem;
+  text-align: center;
+  background-color: #fffefd;
+
+  @import "manage_tab_button";
+
+  manage-tab-button + manage-tab-button {
+    margin-left: 5.438rem;
+  }
+}
+
+.delete-class-button {
+  font-size: 1rem;
+
+  span {
+    margin-left: 0.3rem;
+  }
+}
+
+@import 'manage_info';
+@import 'manage_books';
+@import "../students/styles/manage_students";

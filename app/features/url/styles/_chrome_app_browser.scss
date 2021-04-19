@@ -1,0 +1,44 @@
+.ngdialog.ngdialog-theme-default.live-rhino.chrome-browser {
+  padding: 2rem;
+
+  .ngdialog-content {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    padding: 0;
+
+    .close {
+      position: absolute;
+      top: -0.8rem;
+      left: -0.8rem;
+
+      height: 3.2rem;
+      width: 3.2rem;
+
+      background-color: $activity-back-button-color;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+
+        path {
+          fill: white;
+        }
+      }
+
+      &.ng-click-active {
+        // background-color: $back-button-gray-pressed-background;
+      }
+    }
+  }
+
+  webview {
+    width: 100%;
+    height: 100%;
+  }
+}

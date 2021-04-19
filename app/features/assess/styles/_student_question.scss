@@ -1,0 +1,62 @@
+student-question, student-question-mock {
+  text-align: right;
+
+  header {
+    position: relative;
+
+    correct-question-indicator {
+      position: absolute;
+      left: -4rem;
+      top: -50%;
+    }
+  }
+
+  .answer-content {
+    margin-right: 0.9rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    font-family: Alef;
+    color: $assess-solve-text-color;
+    max-width: 100%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    @include direction;
+  }
+
+  ol {
+    margin-top: 1.5rem;
+
+    li {
+      display: flex;
+      margin-bottom: 0.775rem;
+    }
+  }
+
+  @media only screen and (orientation: portrait) {
+    .answer-content {
+      font-size: 1.25rem;
+    }
+
+    header {
+      display: flex;
+      position: inherit;
+      align-items: center;
+
+      correct-question-indicator {
+        position: inherit;
+        margin-right: 1.5rem;
+
+        .question-status {
+          width: 1.9rem;
+          height: 1.9rem;
+
+          svg {
+            width: 0.8rem;
+            height: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

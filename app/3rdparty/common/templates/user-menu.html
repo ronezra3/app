@@ -1,0 +1,9 @@
+<div class="user-menu">
+  <div class="buttons-container">
+    <button class="user-button profile" ng-if="openEditProfile" ng-click="openEditProfile()">{{'profile' | translate}}</button>
+    <button class="user-button logout" ng-if="logout" ng-click="logout()">{{'log_Out' | translate}}</button>
+    <button class="user-button loginAsTeacher" ng-if="loginAsTeacher" ng-click="loginAsTeacher()">{{'login_as_teacher' | translate}}</button>
+    <button class="user-button loginAsStudent" ng-if="loginAsStudent" ng-click="loginAsStudent()">{{'login_as_student' | translate}}</button>
+  </div>
+</div>
+

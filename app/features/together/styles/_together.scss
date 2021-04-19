@@ -1,0 +1,137 @@
+$together-request-pressed-color: #091d23;
+
+.together-request-arrow {
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.563rem solid $panel-top-buttons-color;
+  float: right;
+  position: relative;
+  display: block;
+  top: 1.125rem;
+  margin-right: 1rem;
+}
+
+.together-request-popup {
+  width: auto;
+  position: absolute;
+  margin: auto;
+  vertical-align: middle;
+  right: 17.5rem;
+  z-index: 30;
+  top: 5.188rem;
+}
+
+.together-request-content {
+  font-family: Alef;
+  font-weight: 400;
+  width: 17.563rem;
+  height: 8.188rem;
+  background-color: $panel-top-buttons-color;
+  right: 1.5rem;
+  position: relative;
+  white-space: nowrap;
+}
+
+.together-request-user-avatar {
+  width: 3.188rem;
+  height: 3.188rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 1.250rem;
+  display: inline-block;
+  margin-top: 1.188rem;
+}
+
+.together-request-user-info {
+  display: inline-block;
+  color: $main-color;
+  font-size: 1.001rem;
+  padding-left: 1rem;
+  vertical-align: top;
+  padding-top: 1.75rem;
+  height: 100%;
+  text-align: left;
+}
+
+.together-request-footer {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-left: 4.313rem;
+}
+
+.together-request-button-decline {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: Alef; 
+  font-style: italic;
+  font-size: 0.992rem;
+  color:  #fefefe;
+  border-radius: 1.5rem;
+  width: 5.25rem;
+  height: 2.438rem;
+}
+
+.together-request-button-decline.ng-click-active {
+  background-color: $together-request-pressed-color;
+}
+
+.together-request-button-accept {
+  @extend .together-request-button-decline;
+  margin-left: 0.375rem;
+}
+
+.together-request-button-accept.ng-click-active {
+  background-color: $together-request-pressed-color;
+}
+
+.together-requested-arrow {
+  @extend .together-request-arrow;
+}
+
+.together-requested-popup {
+  @extend .together-request-popup;
+  right: 8.563rem;
+  top: 8rem;
+}
+
+.together-requested-content {
+  @extend .together-request-content;
+  color: $main-color;
+  width: 9.5rem;
+  height: 3.25rem;
+}
+
+.together-requested-content svg {
+  width: 1.063rem;
+  height: 0.938rem;
+  margin-left: 1.438rem;
+  @include middle-align;
+}
+
+.together-requested-content path {
+  fill: $main-color;
+}
+
+.together-requested-text {
+  display: inline-block;
+  margin-left: 0.625rem;
+  font-family: Alef;
+  font-size: 1rem;
+}
+
+teacher-together-button .panel-button.selected svg {
+  transform: rotate(-90deg);
+  transition: transform .2s ease-in-out;
+}
+
+student-together-button .panel-button {
+  height: 8.313rem;
+}
+
+.together-requested-text {
+  @include middle-align;
+}

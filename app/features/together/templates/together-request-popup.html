@@ -1,0 +1,18 @@
+<div class="together-request-popup fade-animation" ng-show="askingStudent">
+  <div class="together-request-arrow"></div>
+  <div class="together-request-content">
+    <header>
+      <div class="together-request-user-avatar">
+        <img class="member-image" csp-src="{{askingStudent.getAvatarUrl()}}" />
+      </div>
+      <div class="together-request-user-info">
+        <div>{{askingStudent.getFullName()}}</div>
+        <div>{{'asks_for_together' | translate}}</div>
+      </div>
+    </header>
+    <footer class="together-request-footer">
+      <button class="together-request-button-decline" ng-click="onDecline()">{{'decline' | translate}}</button>
+      <button class="together-request-button-accept" ng-click="onAccept()">{{'accept' | translate}}</button>
+    </footer>
+  </div>
+</div>

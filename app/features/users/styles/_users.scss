@@ -1,0 +1,32 @@
+member-thumbnail {
+  .name {
+    color: #6a6a6a;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    font-family: Alef;
+    font-size: 0.875rem;
+    margin-top: 0.875rem;
+    width: 6.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.member-circle {
+  width: 4.438rem;
+  height: 4.438rem;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: auto;
+  border: 0.125rem solid #848f92;
+}
+
+.member-image {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  min-height: 100%;
+}

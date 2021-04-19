@@ -1,0 +1,1 @@
+{"version":3,"file":"ClassMenuItemDirective.js","sourceRoot":"","sources":["ClassMenuItemDirective.ts"],"names":[],"mappings":";;AAAA;IACE,OAAO;QACL,QAAQ,EAAE,GAAG;QACb,QAAQ,EAAE,OAAO,CAAC,qCAAqC,CAAC;QACxD,OAAO,EAAE,IAAI;QACb,KAAK,EAAE;YACL,IAAI,EAAE,GAAG;SACV;KACF,CAAC;AACJ,CAAC;AATD,sCASC"}

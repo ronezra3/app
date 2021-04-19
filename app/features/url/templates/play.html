@@ -1,0 +1,56 @@
+<view hardware-back-button-enabled="false" class="light-view url">
+  <content class="padded" scrollable="true" style="text-align:center">
+      <embedded-url class="narrow" preview="$ctrl.activity"></embedded-url>
+      <div>
+      <button class="url-add-answer" ng-click="$ctrl.displayQuestion = true"
+      style="margin-top: 1rem;
+      margin-bottom: 1rem;
+      float: none;
+      left: 50%;"
+      ng-show="!$ctrl.displayQuestion">{{'שאלה מסכמת'}}</button>
+    </div>
+    <activity-header type="ideas" field="$ctrl.activity.sumarizeActivity.title" ng-show="$ctrl.displayQuestion"></activity-header>
+    <form class="padded" name="$ctrl.form" ng-show="$ctrl.displayQuestion" ng-show="$ctrl.displayQuestion">
+      <textarea type="text" class="activity-input-long direction-rtl" ng-change="$ctrl.associationChanged()"
+                name="association"
+                ng-model="$ctrl.association"
+                placeholder="{{'your_association' | translate}}"
+                style="height:6rem;font-size:1.5rem;font-family: Alef"></textarea>
+      <div class="activity-additional-info">
+        <span class="validation-message-error"
+              ng-show="$ctrl.form.association.$error.required && $ctrl.form.association.$touched">
+          {{'required-field' | translate}}
+        </span>
+        <div class="remaining-chars">
+          {{'remaining_chars' | translate}} {{$ctrl.charLimit - $ctrl.association.length}}
+        </div>
+      </div>
+      
+      <div class="errors">
+        <span ng-if="$ctrl.form.invalid" class="validation-message-error">
+            {{"max_size_error" | translate}} <span>({{$ctrl.form.invalid.$errorParam}})</span>
+        </span>
+      </div>
+
+      <img class="upl-img-preview" ng-src="{{$ctrl.file}}" ng-show="$ctrl.file" />
+      <input type="file" ng-show="!$ctrl.file" style="width:100%;opacity:0;z-index:2;"           
+        ngf-select="$ctrl.addPic($file, $invalidFiles)" 
+        ngf-max-size="$ctrl.maxFileSize" 
+        ngf-accept="$ctrl.allowedFormats" 
+        ngf-pattern="$ctrl.allowedFormats"
+        ngf-model-invalid="$ctrl.form.invalid"
+        >
+      <span ng-show="!$ctrl.file" class="btn btn-info">{{"add_picture" | translate}}</span>
+
+      <small ng-show="!$ctrl.file" style="float:right;direction:rtl;">{{"max_file_size" | translate}} {{$ctrl.maxFileSize}}</small>
+      
+
+    </form>
+    <nav class="narrow activity-buttons-nav padded ideas" ng-show="$ctrl.displayQuestion">
+      <submit-button activity="$ctrl.activity" class="primary" 
+      is-valid="$ctrl.form.$valid && !$ctrl.isWaitingForFile"
+      association="{{$ctrl.association}}" file="{{$ctrl.file}}"></submit-button>
+    </nav>
+    
+  </content>
+</view>

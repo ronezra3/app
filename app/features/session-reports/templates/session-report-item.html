@@ -1,0 +1,27 @@
+<button class="session-report-item-button" ng-click="ctrl.open()">
+  <div class="session-report-item-top">
+    <header>
+      <div class="session-report-item-header">{{ctrl.session.createdAt | amDateFormat:'DD MMMM YYYY'}}</div>
+      <div class="session-report-item-sub-header">{{ctrl.session.createdAt | amDateFormat:'h:mm a'}}- {{ctrl.session.endedAt |
+        amDateFormat:'h:mm a'}}
+      </div>
+    </header>
+
+    <div class="session-repeat-item-attending">
+      <ng-include class="icon" src="'images/panel/icons/attending-online.png'"></ng-include>
+      {{ctrl.session.attended.length}}/{{ctrl.membersCount}} {{'attended' | translate}}
+    </div>
+
+    <section class="session-report-item-activities">
+      <ng-include ng-repeat="type in ctrl.activities()" class="session-repeat-item-activity-icon" ng-class="type"
+                src="'images/panel/icons/' + type + '.png'"></ng-include>
+    </section>
+  </div>
+  <footer class="session-report-item-footer">
+    <div class="books-container">
+      <session-report-book-location class="session-reports-book-location" ng-repeat="book in ctrl.sessionBooks"
+                                    book="book" pages="ctrl.getBookPages(book)">
+      </session-report-book-location>
+    </div>
+  </footer>
+</button>

@@ -1,0 +1,11 @@
+@import '~bi-app-sass/bi-app/bi-app-rtl';
+@import 'app';
+
+
+.direction-rtl, .errors {
+    direction : rtl;
+}
+
+.direction-ltr {
+  direction: ltr;
+}

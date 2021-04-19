@@ -1,0 +1,17 @@
+<view class="light-view flex-view participant">
+  <activity-nav-bar></activity-nav-bar>
+  <nav class="activity-buttons-nav padded">
+    <activity-publish-button activity="$ctrl.activity" class="primary"
+                             type="participant" specific-data="$ctrl.getSpecificData()"
+                             is-valid="$ctrl.form.$valid" pre-publish="$ctrl.prePublish()"
+                             is-dirty="$ctrl.form.$dirty"
+                             post-publish="$ctrl.postPublish()"
+                             next-screen="play"></activity-publish-button>
+  </nav>
+  <content scrollable="true">
+    <form name="$ctrl.form">
+      <participant-preview-content is-required="false" activity="$ctrl.activity"
+                                   form="$ctrl.form"></participant-preview-content>
+    </form>
+  </content>
+</view>

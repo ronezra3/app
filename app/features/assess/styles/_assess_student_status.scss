@@ -1,0 +1,52 @@
+.assess.student-stats {
+  .circle {
+    @extend .member-circle;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }
+
+  .image {
+    @extend .member-image;
+  }
+
+  .name {
+    @include horizontal-center();
+    color: #0d2c35;
+    font-size: 1.3rem;
+    font-style: italic;
+    display: block;
+    margin: 0.8125rem auto auto;
+    height: 1.5rem;
+    width: 100%;
+  }
+
+  .questions {
+    margin-top: 3rem;
+    display: block;
+
+    .question {
+      @include circle;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: inline-block;
+      margin-right: 1.188rem;
+      margin-left: 1.188rem;
+      margin-bottom: 1.188rem;
+      text-align: center;
+      line-height: 2.5rem;
+      color: #b6b7b7;
+      background: #f1f0ef;
+    }
+
+    .question.correct {
+      color: #ffffff;
+      background: $assess-correct-color;
+    }
+
+    .question.incorrect {
+      color: #ffffff;
+      background: $assess-incorrect-color;
+    }
+  }
+}

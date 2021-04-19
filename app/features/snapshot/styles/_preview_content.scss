@@ -1,0 +1,33 @@
+$snapshot-yes-disabled: #e2eca0;
+$snapshot-no-disabled: #ffbed2;
+
+snapshot-preview-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 25rem;
+  margin: auto;
+
+  .container {
+    flex: 1;
+
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+
+    &.yes {
+      // border-color: $snapshot-yes-disabled;
+
+      path {
+        fill: $snapshot-yes-disabled;
+      }
+    }
+
+    &.no {
+      // border-color: $snapshot-no-disabled;
+
+      path {
+        fill: $snapshot-no-disabled;
+      }
+    }
+  }
+}

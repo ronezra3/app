@@ -1,0 +1,66 @@
+.class-item-root {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.class-item {
+  margin: 1rem 0 0 1rem;
+  width: 10.938rem;
+  height: 10.438rem;
+  background-color: #e6e5e4;
+  border-radius: 10px;
+
+  @media only screen and (max-width: $smart-phone-max-screen-width) and (orientation: portrait) {
+    margin: 1rem auto 0 auto;
+  }
+
+  &.ng-click-active {
+    background-color: #ddd;
+
+    .pressed-cover {
+      opacity: 0.3;
+    }
+  }
+
+  header {
+    height: 4.375rem;
+    padding-top: 1rem;
+
+    .title {
+      @extend .class-item-root;
+      font-family:Calibri;
+      color: #15404e;
+      margin-bottom: 0.188rem;
+    }
+
+    .sub-header {
+      @extend .class-item-root;
+      display: block;
+      color: rgba(81, 81, 81, 0.7);
+      font-size: 0.999rem;
+      font-style: italic;
+      transform: scaleY(1.0007); /* width and height properties ommitted due to transform */
+      line-height: 0.875rem;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 7.798rem;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  .pressed-cover {
+    opacity: 0;
+    margin-top: -7.797rem;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  footer {
+    width: 100%;
+    min-height: 1.25rem;
+  }
+}

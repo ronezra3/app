@@ -1,0 +1,43 @@
+.register {
+  avatar-picker {
+    position: absolute;
+    left: calc(50% - 4rem);
+    top: -2rem;
+  }
+
+  .terms-agreement {
+    text-align: left;
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    a {
+      cursor: pointer;
+      color: $main-color;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}
+
+.login .content .register .login-details > .login-input:first-of-type {
+  margin-top: 5rem;
+}
+
+.register-details-names {
+  display: flex;
+
+  > input {
+    flex: 1;
+
+    &:first-child {
+      margin-right: 0.3125rem;
+    }
+
+    &:last-child {
+      margin-left: 0.3125rem;
+    }
+  }
+}

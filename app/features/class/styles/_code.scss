@@ -1,0 +1,29 @@
+$header-gray-color: #515151;
+
+.class-code {
+  color: $header-gray-color;
+  font-family: Alef;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.class-code-container {
+  line-height: 1.7;
+}
+
+.lock-icon {
+  line-height: 1.7;
+}
+
+.lock-icon svg {
+  height: 1.188rem;
+  padding-left: 3.125rem;
+}
+
+.lock-icon path {
+  fill: $header-gray-color;
+}
+
+.lock-icon circle {
+  fill: $header-gray-color;
+}

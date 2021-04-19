@@ -1,0 +1,85 @@
+/* snapshot answer palette color */
+$progress-bar-background: #eef0ef;
+$poll-answer-status-title-color: #fffdfc;
+$poll-answer-voters-color: white;
+
+/**************************/
+
+/* creates the progress-bar values classes */
+@mixin poll-answer-status-value($answer-index) {
+  background-color: $poll-color;
+}
+
+@for $i from 1 through $max-poll-answers {
+  ul.poll-answers-status li:nth-child(#{$i}) progress::-webkit-progress-value {
+    @include poll-answer-status-value($i);
+  }
+
+  ul.poll-answers-status li:nth-child(#{$i}) progress::-ms-fill {
+    @include poll-answer-status-value($i);
+  }
+}
+
+.poll-answer-status-progress {
+  width: 100%;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+  border: 0;
+  margin-top: 3rem;
+  direction: rtl;
+  vertical-align: -0.3rem;
+}
+
+.poll-answer-status-progress::-webkit-progress-value {
+  transition: width 1s;
+}
+
+.poll-answer-status-progress::-webkit-progress-bar {
+  background-color: $progress-bar-background;
+}
+
+.poll-answer-status-progress::-moz-progress-bar {
+  background-color: $poll-color;
+}
+
+.poll-answer-status-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 1.188rem;
+  background-color: $progress-bar-background;
+}
+
+.poll-answer-status-title {
+  color: #201804;
+  font-size: 1.25rem;
+  font-family: Alef;
+  font-style: italic;
+  line-height: 1;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  text-align: right;
+  padding-left: 5rem;
+  @include direction;
+}
+
+.poll-answer-status-number {
+  color: #201804;
+  font-size: 1.25rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  text-align: left;
+}
+
+.poll-answer-voters-icon svg {
+  display: none;
+  width: 0.8125rem;
+  height: 0.9375rem;
+}
+
+.poll-answer-voters-icon svg circle,
+.poll-answer-voters-icon svg path {
+  fill: #201804;
+}

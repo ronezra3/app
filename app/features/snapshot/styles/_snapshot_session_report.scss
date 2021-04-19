@@ -1,0 +1,74 @@
+.session-repeat-item-activity-icon.snapshot svg {
+  height: 1.688rem;
+  width: 2.125rem;
+
+  path {
+    fill: $snapshot-color;
+  }
+}
+
+.snapshot-session-report-icon svg {
+  width: 2.063rem;
+  height: 1.625rem;
+}
+
+.snapshot-session-report-icon.yes path {
+  fill: $snapshot-yes;
+}
+
+.snapshot-session-report-icon.no path {
+  fill: $snapshot-no;
+}
+
+.snapshot-session-report-icon.yes {
+  margin-left: 2.438rem;
+}
+
+.snapshot-session-report-vote {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.snapshot-session-report-title {
+  margin-top: 2.313rem;
+  text-align: center;
+  font-family: Alef; 
+  font-weight: 600; font-style: italic;
+  font-size: 1.25rem;
+  color: $session-report-dark-color;
+}
+
+
+.snapshot-session-report-replied-number {
+  margin-top: 1.688rem;
+  display: block;
+}
+
+.snapshot-session-report-replied-number .replied-counter {
+  font-size: 1rem;
+}
+
+.snapshot-session-report-replied-number .replied-label {
+  font-size: 1rem;
+}
+
+.session-report-snapshot-vote {
+  margin-top: 1.625rem;
+}
+
+.snapshot-session-report-count {
+  font-size: 3.118rem;
+  font-family: Alef; 
+  font-style: italic;
+}
+
+.snapshot-session-report-yes {
+  @extend .snapshot-session-report-count;
+  color: $snapshot-yes;
+}
+
+.snapshot-session-report-no {
+  @extend .snapshot-session-report-count;
+  color: $snapshot-no;
+}

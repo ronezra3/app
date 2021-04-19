@@ -1,0 +1,9 @@
+missing-students-section button.notification:not(.selected) {
+  .number-icon {
+    color: $main-color;
+  }
+
+  svg path {
+    fill: $main-color;
+  }
+}

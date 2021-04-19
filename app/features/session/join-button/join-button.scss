@@ -1,0 +1,25 @@
+@import "../../../3rdparty/common/styles/constants";
+
+.activity-buttons-nav join-session-button.primary button {
+  background-color: $main-color;
+  padding-left: 0.2rem;
+  text-align: left;
+  white-space: nowrap;
+
+  > * {
+    vertical-align: middle;
+  }
+
+  img {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .short-text {
+    display: none;
+  }
+
+  &.ng-click-active:enabled {
+    background-color: $secondary-color;
+  }
+}

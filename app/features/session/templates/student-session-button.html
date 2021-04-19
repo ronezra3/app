@@ -1,0 +1,11 @@
+<click-once-button ng-show="!$ctrl.isInSession()" on-click="$ctrl.join()" enable-on-success="true" class="session-button off-session">
+  <loader></loader>
+  <ng-include class="session-clock" src="'images/panel/icons/session-clock.png'"></ng-include>
+  <span>{{ 'join_session' | translate }}</span>
+</click-once-button>
+
+<button ng-show="$ctrl.isInSession()" ng-click="$ctrl.leave()" class="session-button on-session">
+  <ng-include class="session-clock" src="'images/panel/icons/session-clock.png'"></ng-include>
+  <span>{{ 'leave_session' | translate }}</span>
+</button>
+

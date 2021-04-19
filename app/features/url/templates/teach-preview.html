@@ -1,0 +1,32 @@
+<view class="light-view flex-view url">
+  <activity-nav-bar></activity-nav-bar>
+  <nav class="activity-buttons-nav padded">
+    <activity-publish-button activity="$ctrl.activity" class="primary" type="url" specific-data="$ctrl.getSpecificData()"
+                             is-dirty="$ctrl.form.$dirty" is-valid="true" pre-publish="$ctrl.prePublish()" post-publish="$ctrl.postPublish()"></activity-publish-button>
+    <button class="url-add-answer" ng-click="$ctrl.addUrl($event)">{{'add_url' | translate}}</button>
+  </nav>
+  <div class="anonymous-checkbox">
+      <span>
+        {{'anonymous' | translate}}   
+      </span>  
+     <input type="checkbox" 
+         ng-model="$ctrl.activity.sumarizeActivity.isAnonymous" 
+         style="width: auto;
+         display: inline;
+         height: auto;
+         -webkit-appearance: checkbox !important;">
+   </div>
+  <content class="padded" scrollable=true>
+    <form class="narrow" name="$ctrl.form">
+      <div ng-repeat="url in $ctrl.activity.urls">
+        <url-preview-content activity="url" default-url="$ctrl.defaultUrl" is-required="false" form="$ctrl.form"></url-preview-content>
+        <button class="poll-option-delete" ng-click="$ctrl.onDelete($index)"
+                ng-disabled="$ctrl.canDelete()" style="position: relative;top: -102px;left: 375px;">
+          <ng-include class="delete-icon" src="'images/x-icon.png'"></ng-include>
+        </button>
+      </div>
+      <preview-header id="bottom" type="ideas" is-required="false" field-name="title" activity="$ctrl.activity.sumarizeActivity"
+                      ng-if="$ctrl.activity.sumarizeActivity" form="$ctrl.form"></preview-header>
+    </form>
+  </content>
+</view>

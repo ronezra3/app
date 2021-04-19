@@ -1,0 +1,21 @@
+<view class="assess results flex-view gray-view">
+  <assess-dashboard-header assess="$ctrl.activity"
+                           still-working-count="$ctrl.studentsData.notFinished.length"
+                           on-time-changed="$ctrl.countdown()"></assess-dashboard-header>
+
+  <content class="padded">
+    <assess-dashboard-middle assess="$ctrl.activity"
+                             time-left="$ctrl.timeLeft"
+                             timed-out="$ctrl.timedOut"
+                             average-grade="$ctrl.averageGrade"
+                             average-progress="$ctrl.averageProgress"></assess-dashboard-middle>
+
+    <assess-dashboard-bottom open-student-stats="$ctrl.openStudentStats(student)"
+                             need-help-students="$ctrl.needHelpStudents"
+                             challenging-content="$ctrl.challengingContent"
+                             students-data="$ctrl.studentsData" ,
+                             results="$ctrl.studentsAssesses",
+                             questions="$ctrl.activity.questions"
+    ></assess-dashboard-bottom>
+  </content>
+</view>

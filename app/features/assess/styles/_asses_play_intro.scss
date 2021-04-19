@@ -1,0 +1,47 @@
+.assess.play-intro {
+  .ngdialog-content {
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important;
+  }
+
+  .assess-dialog-header {
+    margin-bottom: 0 !important;
+
+    h1 {
+      color: #2B8252;
+      font-size: 2.8rem;
+      line-height: 0.9;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+
+      @media only screen and (orientation: portrait) {
+        font-size: 2.1rem;
+      }
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    svg {
+      width: 1.750em;
+      height: 2.125em;
+
+      path {
+        fill: $assess-color;
+      }
+    }
+  }
+
+  p {
+    direction: rtl;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  footer {
+    margin-top: 1.25rem!important;
+  }
+}

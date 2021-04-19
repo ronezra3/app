@@ -1,0 +1,17 @@
+.add-class.create {
+  input, select {
+    width: 100%;
+  }
+
+  input, subject-picker {
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @media only screen  and (max-height: 29.688em) {
+    > img {
+      display: none;
+    }
+  }
+}

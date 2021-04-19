@@ -1,0 +1,28 @@
+.missing-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.563rem 1.188rem;
+
+    member-thumbnail .name {
+      margin: 0.2rem;
+    }
+
+    .offline-label {
+      @extend .ellipsis;
+      color: #808080;
+      font-size: 0.875rem;
+      font-family: Alef;
+      direction: rtl;
+      max-width: 7.8rem;
+    }
+
+    .app-label {
+      color: $main-color;
+    }
+  }
+}

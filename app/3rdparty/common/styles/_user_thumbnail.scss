@@ -1,0 +1,41 @@
+user-thumbnail button {
+  // padding-right: 0;
+
+  display: block;
+  margin-top: 1.5vw;
+  margin-left: -3.5vw;
+  span {
+    color: white;
+    font-family: Alef;
+    font-size: 1.5vw;
+    margin-right: 0.5vw;
+    text-transform: capitalize;
+    vertical-align: middle;
+  }
+
+  img {
+    height: 3vw;
+    width: 3vw;
+    //border: solid $secondary-color 0.15rem;
+    background: #E9E9E9;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+}
+
+
+
+@media only screen and (orientation: portrait) {
+  user-thumbnail button {
+
+    span {
+      font-size: 3vw;
+      margin-right: 1vw;
+    }
+
+    img {
+      height: 6vw;
+      width: 6vw;
+    }
+  }
+}

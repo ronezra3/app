@@ -1,0 +1,23 @@
+<preview-header type="poll" is-required="$ctrl.isRequired" field-name="question" activity="$ctrl.activity" form="$ctrl.form"></preview-header>
+<ul>
+  <li ng-repeat="answer in $ctrl.activity.answers" class="animate-repeat">
+    <poll-option class="poll-answer"
+                 is-required="$ctrl.isRequired"
+                 answers="$ctrl.activity.answers"
+                 index="$index"
+                 on-delete="$ctrl.removeAnswerAt($index)"
+                 can-delete="!$ctrl.canDelete()"></poll-option>
+    <div class="validation-message-error"
+         ng-show="$ctrl.form['option-' + ($index + 1)].$error.required && $ctrl.form['option-' + ($index + 1)].$touched">
+      {{'required-field' | translate}}
+    </div>
+    <div class="validation-message-error"
+         ng-show="$ctrl.form['option-' + ($index + 1)].$error.duplicatedAnswer">
+      {{'duplicatedAnswer' | translate}}
+    </div>
+  </li>
+</ul>
+
+<button class="add-answer"
+        ng-click="$ctrl.addAnswer($event)" ng-disabled="!$ctrl.canAddAnswers()">{{'add_option' | translate}}
+</button>

@@ -1,0 +1,28 @@
+.missing-students-popup {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 14rem;
+  right: 19.5rem;
+  z-index: 10;
+
+  .arrow {
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.563rem solid #07171C;
+  }
+
+  .missing-list {
+    background-color: #07171C;
+    max-width: 29.750rem;
+
+    member-thumbnail .name {
+      color: white;
+      font-weight: 300;
+    }
+  }
+}
+
+.missing-students .content {
+  padding: 1.625rem 2.5rem;
+}

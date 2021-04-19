@@ -1,0 +1,6 @@
+<div class="search-box" ng-class="{'searching' : isSearching}">
+  <svg-icon class="search-box-icon" src="3rdparty/common/images/search_icon.png"></svg-icon>
+  <div class="search-box-input-wrapper">
+    <input type="search" placeholder="Search" ng-model="model" ng-focus="setIsSearching(true)" ng-blur="setIsSearching(false)">
+  </div>
+</div>

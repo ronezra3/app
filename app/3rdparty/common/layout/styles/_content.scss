@@ -1,0 +1,40 @@
+.flex-view > .content {
+  flex: 1;
+  position: relative;
+  //Fix for IOS
+  height: auto;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  z-index:1;
+}
+
+.from-top {
+  position:absolute!important;
+  height:100%!important;
+}
+
+.scrollable {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.narrow {
+  max-width: 45rem;
+  text-align: center;
+  margin: auto;
+}
+
+.padded {
+  padding: 1rem;
+}
+
+.student-top-gap {
+  height: 8.5vw;
+
+  @media only screen and (orientation: portrait) {
+    height: 20.5vw;
+  }
+}

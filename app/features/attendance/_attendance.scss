@@ -1,0 +1,13 @@
+.attendance {
+  li {
+    margin: 1.563rem 1.188rem;
+
+    &.missing .member-circle {
+      opacity: 0.3;
+    }
+  }
+
+  .clock svg {
+    height: 1.3rem;
+  }
+}

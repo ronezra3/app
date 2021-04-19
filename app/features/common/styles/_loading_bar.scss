@@ -1,0 +1,11 @@
+@import "~angular-loading-bar/build/loading-bar.min";
+
+#loading-bar {
+  .bar {
+    background: #fccf31;
+  }
+
+  .peg {
+    box-shadow: #fccf31 1px 0 6px 1px;
+  }
+}

@@ -1,0 +1,35 @@
+.class-header-dash, .class-header-desc {
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+
+.class-header-desc {
+  @extend .ellipsis;
+}
+
+class-header-title {
+  font-size: 1.5vw; //1.749rem;
+  display: flex;
+  overflow: hidden;
+}
+
+@media only screen and (orientation: portrait) {
+  .class-header-dash {
+    //display: none;
+    //content: '';
+  }
+
+  .nav-bar-title {
+    //font-size: 1.4rem;
+  }
+
+  .class-header-desc {
+    //font-size: 1.1rem;
+    margin-left: 0.5rem;
+  }
+
+  class-header-title {
+    //display: inline;
+    font-size: 3vw;
+  }
+}

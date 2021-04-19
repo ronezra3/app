@@ -1,0 +1,29 @@
+activity-end-button {
+  svg {
+    top: -0.72rem;
+  }
+
+  .standby.primary-icon svg {
+    left: 0.05rem;
+    width: 3.500rem;
+    height: 3.750rem;
+  }
+
+  .pressed.primary-icon svg {
+    left: 0.3rem;
+    width: 3.875rem;
+    height: 3.375rem;
+  }
+
+  .standby.secondary-icon svg {
+    left: 0.05rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .pressed.secondary-icon svg {
+    left: 0.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

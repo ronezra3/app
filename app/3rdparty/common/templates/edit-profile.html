@@ -1,0 +1,24 @@
+<form name="$ctrl.form">
+  <avatar-picker on-avatar-added="$ctrl.onAvatarAdded(avatar)" avatar-url="$ctrl.user.getAvatarUrl()"></avatar-picker>
+  <span class="user-name-label">{{$ctrl.user.userName}}</span>
+
+  <div class="register-details-names">
+    <input type="text" class="login-input" ng-model="$ctrl.user.firstName" placeholder="{{'first_name' | translate}}">
+    <input type="text" class="login-input" ng-model="$ctrl.user.lastName" placeholder="{{'last_name' | translate}}">
+  </div>
+  <div class="password-inputs-container">
+    <input class="login-input" type="password" ng-model="$ctrl.user.oldPassword"
+           placeholder="{{'old_password' | translate}}">
+    <input class="login-input" type="password" ng-model="$ctrl.user.newPassword"
+           placeholder="{{'new_password' | translate}}">
+    <input class="login-input" type="password" ng-model="$ctrl.user.confirmedPassword"
+           placeholder="{{'confirm_password' | translate}}">
+  </div>
+  <footer>
+    <button class="secondary action-button" ng-click="$ctrl.close()" type="button">{{'cancel' | translate}}</button>
+    <click-once-button is-disabled="!$ctrl.form.$dirty" class="primary action-button" on-click="$ctrl.save()" is-valid="$ctrl.validate()">
+      <span>{{'save' | translate}}</span>
+      <loader></loader>
+    </click-once-button>
+  </footer>
+</form>

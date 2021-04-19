@@ -1,0 +1,47 @@
+<preview-header type="assess" is-required="$ctrl.isRequired" field-name="title" activity="$ctrl.activity" form="$ctrl.form"></preview-header>
+
+<fieldset class="assess-preview-fieldset">
+  <legend class="assess-preview-fieldset-title-container">
+    <span class="assess-preview-fieldset-title">{{'assessment-settings' | translate}}</span>
+  </legend>
+  <div class="wrap-panel assess-settings-wrapper">
+    <div>
+      <div class="assess-preview-settings-col-title">{{'time-limit' | translate}}</div>
+      <assess-time-picker assess="$ctrl.activity"></assess-time-picker>
+    </div>
+    <!--<div>-->
+    <!--<div class="assess-preview-settings-col-title">{{'open-book' | translate}}</div>-->
+    <!--<assess-settings-checkbox model="assess.openBook" ng-disabled="true"></assess-settings-checkbox>-->
+    <!--</div>-->
+    <div>
+      <div class="assess-preview-settings-col-title">{{'immediate-feedback' | translate}}</div>
+      <assess-settings-checkbox model="$ctrl.activity.immediateFeedback"
+                                on-change="$ctrl.immediateFeedbackChanged(immediateFeedback)"></assess-settings-checkbox>
+    </div>
+  </div>
+</fieldset>
+
+<article>
+  <assess-question-input ng-repeat="question in $ctrl.activity.questions" class="assess-preview-question"
+                         get-index="$ctrl.getQuestionIndex(question, $index + 1)"
+                         immediate-feedback="$ctrl.activity.immediateFeedback"
+                         remove="$ctrl.removeQuestion(question)"
+                         question="question"></assess-question-input>
+</article>
+
+<fieldset class="assess-preview-fieldset">
+  <legend class="assess-preview-fieldset-title-container">
+    <span class="assess-preview-fieldset-title">{{'add-question' | translate}}</span>
+  </legend>
+  <div class="wrap-panel assess-questions-types">
+    <add-question-button on-click="$ctrl.addQuestion('boolean')">
+      {{'true' | translate}} / {{'false' | translate}}
+    </add-question-button>
+    <add-question-button on-click="$ctrl.addQuestion('single')">
+      {{'single-choice' | translate}}
+    </add-question-button>
+    <add-question-button on-click="$ctrl.addQuestion('multi')">
+      {{'multiple-choice' | translate}}
+    </add-question-button>
+  </div>
+</fieldset>

@@ -1,0 +1,17 @@
+.assess-progress-background {
+  background-color: #e5e4e3;
+  width: 98%;
+  height: 0.625rem;
+  border-radius: 25px;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+}
+
+.assess-progress-foreground {
+  background-color: $assess-color;
+  position: relative;
+  height: 50%;
+  top: 25%;
+  border-radius: 25px;
+  transition: width 1s;
+}

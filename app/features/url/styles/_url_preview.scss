@@ -1,0 +1,17 @@
+url-preview {
+  .slide-down-animation {
+    transform: scaleY(1);
+  }
+
+  .slide-down-animation.ng-hide-add,
+  .slide-down-animation.ng-hide-remove {
+    transform-origin: top;
+    transition: transform 0.25s ease;
+  }
+
+  .slide-down-animation.ng-hide {
+    transform: scaleY(0);
+  }
+}
+
+

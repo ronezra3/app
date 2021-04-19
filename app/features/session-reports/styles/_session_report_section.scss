@@ -1,0 +1,132 @@
+$session-report-section-empty-color: #d1d2d2;
+session-report-section {
+  display: block;
+
+  .session-report-section {
+    background-color: white;
+    height: 100%;
+    text-align: center;
+
+    > header {
+      height: 4.375rem;
+      border-bottom: solid 0.063rem $gray-view-background;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.438rem;
+    }
+
+    .nav-button {
+      border-radius: 50%;
+      width: 2.750rem;
+      height: 2.750rem;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 1.563rem;
+        line-height: 1.563rem;
+        font-family: Alef;
+        font-style: italic;
+        margin-left: 0.625rem;
+        color: $session-report-section-empty-color;
+      }
+    }
+
+    .arrow {
+      width: 1.3rem;
+      height: 1.3rem;
+      vertical-align: middle;
+
+      svg {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+
+    .nav-button[disabled] .arrow path {
+      fill: #e6e5e4;
+    }
+
+    .icon {
+      fill: $session-report-section-empty-color;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  .session-report-section-empty {
+    display: block;
+    height: 23.375rem;
+  }
+
+  .session-report-section-empty.assess {
+    height: 9.5rem;
+  }
+
+  .session-report-empty-activity-icon {
+    display: block;
+  }
+
+  .session-report-section-empty-middle {
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+
+  }
+
+  .session-report-empty-activity-icon svg {
+    width: 3.375rem;
+    height: 4.313rem;
+    text-align: center;
+  }
+
+  .session-report-empty-activity-icon path {
+    fill: $session-report-section-empty-color;
+  }
+
+  .session-report-empty-activity-shadow {
+    text-align: center;
+  }
+
+  .session-report-empty-activity-shadow svg {
+    margin-top: 1.5rem;
+
+  }
+
+  .minor-activity-session-report-section {
+    height: 27.81rem;
+  }
+
+  .assess-session-report-section {
+    height: 13.81rem;
+  }
+
+  .session-report-carousel {
+    height: calc(100% - 4.375rem);
+  }
+}
+
+@mixin specific-session-report-section($primary-color, $secondary-color) {
+  &.session-report-section {
+    .icon path,
+    .arrow path {
+      fill: $primary-color;
+    }
+
+    .title span {
+      color: $primary-color;
+    }
+
+    .nav-button.ng-click-active {
+      background-color: $secondary-color;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.manage-info {
+  text-align: center;
+
+  .info-code {
+    margin-top: 3.688rem;
+    color: $main-color;
+    font-size: 1.624rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    path {
+      fill: $main-color;
+    }
+  }
+
+  .info-share-code {
+    margin-top: 0.813rem;
+    font-style: italic;
+    color: rgba(13, 44, 53, 0.5);
+    font-size: 1rem;
+  }
+
+  .info-class-details {
+    margin-top: 2.563rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-color: rgba(210, 211, 213, 0.5);
+    width: 21.375rem;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .info-class-details-title {
+    font-style: italic;
+    color: rgba(13, 44, 53, 0.3);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding-right: 0.813rem;
+    padding-left: 0.813rem;
+  }
+
+  input, select {
+    margin-top: 0.625rem;
+    width: 100%;
+  }
+
+  .action-button {
+    margin-top: 0.688rem;
+    width: 100%;
+    height: 2.875rem;
+    font-size: 1.124rem;
+    margin-bottom: 1rem;
+  }
+}

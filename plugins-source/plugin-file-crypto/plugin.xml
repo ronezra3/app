@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="learni-file-crypto"
+        version="0.2.0">
+
+  <name>learni-file-crypto</name>
+  <description>learni book loader</description>
+  <license>MIT</license>
+  <engines>
+    <engine name="cordova-android" version=">=4" />
+    <engine name="cordova-plugman" version=">=4.2.0" /><!-- needed for gradleReference support -->
+  </engines>
+  <js-module name="safe" src="www/learni.file.crypto.js">
+    <merges target="window"/>
+  </js-module>
+
+  <platform name="android">
+    <source-file src="src/android/Safe.java" target-dir="src/net/learni"/>
+    <config-file target="res/xml/config.xml" parent="/*" >
+      <feature name="Safe">
+        <param name="android-package" value="net.learni.Safe"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    </config-file>
+  </platform>
+
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="Safe">
+        <param name="ios-package" value="Safe"/>
+      </feature>
+    </config-file>
+    <framework src="Foundation.framework" />
+    <framework src="Security.framework" />
+    <source-file src="src/ios/Safe.m"/>
+    <header-file src="src/ios/Safe.h"/>
+  </platform>
+</plugin>

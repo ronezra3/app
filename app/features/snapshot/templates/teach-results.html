@@ -1,0 +1,9 @@
+<view hardware-back-button-enabled="!$ctrl.isPlaying && !$ctrl.disableSharing" class="light-view flex-view snapshot results">
+  <activity-nav-bar></activity-nav-bar>
+  <activity-teach-results-footer type="snapshot" disable-sharing="$ctrl.disableSharing" activity="$ctrl.activity"
+                           is-playing="$ctrl.isPlaying" post-share-callback="$ctrl.postShareCallback()"></activity-teach-results-footer>
+  <content class="padded" scrollable="true">
+    <snapshot-results-content activity="$ctrl.activity" is-playing=$ctrl.isPlaying></snapshot-results-content>
+  </content>
+
+</view>

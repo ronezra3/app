@@ -1,0 +1,24 @@
+<div class="question">{{'question-first-letter' | translate}}{{selectedQuestion.index}}</div>
+<div class="text">{{selectedQuestion.content}}</div>
+<div class="replied">
+  <div class="replied-count">{{selectedQuestion.correct +
+    selectedQuestion.incorrect}}/{{ctrl.getAttendingCount()}}
+  </div>
+  <div class="replied-text">{{'replied' | translate}}</div>
+</div>
+<div class="results">
+  <div class="person">
+    <div class="head incorrect"></div>
+    <div class="body incorrect"></div>
+  </div>
+  <div class="number incorrect">{{selectedQuestion.incorrect}}</div>
+  <div class="person">
+    <div class="head correct"></div>
+    <div class="body correct"></div>
+  </div>
+  <div class="number correct">{{selectedQuestion.correct}}</div>
+</div>
+
+<footer>
+  <button class="primary action-button" ng-click="closeThisDialog()" type="button">{{'close' | translate}}</button>
+</footer>

@@ -1,0 +1,72 @@
+.ngdialog.attention {
+  .ngdialog-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .ngdialog-content {
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    /*height: calc(100vh - 35vw);*/
+    border-radius: 5vw;
+
+    @media only screen and (max-width: 1000px) {
+      width: 80%;
+      height: 75%;
+    }
+
+    .avatar-circle {
+      width: 9.375rem;
+      height: 9.375rem;
+      border-radius: 50%;
+      border: solid white 3px;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+
+      .avatar-image {
+        max-width: 100%;
+        min-height: 100%;
+      }
+    }
+
+    .avatar-teacher {
+      .avatar-image {
+        max-width: 20%;
+        max-height: 20%;
+        @media only screen and (max-width: 1000px) {
+          max-width: 40%;
+        }
+      }
+    }
+
+    .text {
+      margin-left: auto;
+      margin-right: auto;
+      width: 65vw;
+      color: #2b1f02;
+      font-size: 4vw;
+      line-height: 1;
+      font-family: Alef;
+      font-style: italic;
+      text-align: center;
+      direction: rtl;
+      @media only screen and (max-width: 700px) {
+        margin-top: 50%;
+      }
+
+      p {
+        margin-block-end: 4vw;
+        margin-block-start: 4vw;
+      }
+
+      .title {
+        color: #248350;
+        font-size: 5vw;
+        font-weight: 700;
+      }
+    }
+  }
+}

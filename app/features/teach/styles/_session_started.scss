@@ -1,0 +1,104 @@
+$title-dark-color: #515151;
+$instructions-color: #3a3a3a;
+
+.session-started {
+  .extended-title .clock svg {
+    height: 1.3rem;
+
+    path {
+      fill: white;
+    }
+  }
+
+  .content {
+    @include direction;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .full-attendance.ng-click-active:enabled {
+      background-color: #d5d5d4;
+    }
+
+    .full-attendance {
+      @include transparent-button;
+      vertical-align: middle;
+      height: 2.938rem;
+      display: inline;
+      font-family: Alef;
+      font-weight: 600;
+      font-style: italic;
+      color: $instructions-color;
+      font-size: 1.105rem;
+
+      .person {
+        display: inline-block;
+
+        .head, .body {
+          border-color: $instructions-color;
+          background-color: $instructions-color;
+        }
+
+        .head {
+          border-radius: 50%;
+          border: 5px solid;
+          width: 0.5rem;
+          height: 0.5rem;
+          margin: auto;
+        }
+
+        .body {
+          border: 1px solid;
+          width: 1rem;
+          height: 0.5rem;
+          margin-top: 2px;
+          border-top-left-radius: 50%;
+          border-top-right-radius: 50%;
+        }
+      }
+    }
+
+    .main-title {
+      font-family: Alef;
+      font-style: italic;
+      color: $title-dark-color;
+      font-size: 1.808rem;
+    }
+
+    .instructions {
+      font-family: Alef;
+      font-style: italic;
+      color: $instructions-color;
+      font-size: 1.249rem;
+
+      > * {
+        vertical-align: middle;
+      }
+
+      @import "join_button";
+    }
+
+    @import "attendance_stats";
+  }
+
+  @include specific-activity-button-color($main-color, $secondary-color);
+
+  .activity-buttons-nav button {
+    svg {
+      left: 0.75rem;
+      width: 1.688rem;
+    }
+
+    .standby svg {
+      top: -.45rem;
+      height: 3.5rem;
+    }
+
+    .pressed svg {
+      top: -.1rem;
+      height: 3.125rem;
+    }
+  }
+}

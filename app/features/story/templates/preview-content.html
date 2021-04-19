@@ -1,0 +1,39 @@
+<div ngf-select="$ctrl.onFileAdded($file)" 
+    ng-model="$ctrl.previewImageSrc" 
+    ngf-max-size="$ctrl.maxFileSize" 
+    ngf-accept="$ctrl.allowedFormats" 
+    ngf-pattern="$ctrl.allowedFormats"
+    ngf-model-invalid="$ctrl.form.invalid"
+    ngf-drag-over-class="'dragover'"
+    ngf-drop="$ctrl.onFileAdded($file)"
+    >
+    <div class="image-uploader" >
+        <div class="errors">
+            <span ng-if="$ctrl.form.invalid" class="validation-message-error">
+                {{"max_size_error" | translate}} ({{$ctrl.form.invalid.$errorParam}})
+            </span>
+        </div>
+        
+        <div class="image-container">
+            <div  ng-if="!$ctrl.previewImageSrc" >
+                <button>{{"upload_file" | translate}}</button>
+            </div>
+
+            
+
+            <img
+                ng-if="$ctrl.previewImageSrc"
+                ngf-src="$ctrl.previewImageSrc"
+                ngf-resize="{width: 400, height: 400, quality: 0.9}"
+                ngf-no-object-url="true" 
+                style="max-height: 400px; "
+                ng-class="$ctrl.activity.files.length > 0 ? 'done' : 'pending'"
+            >
+
+
+            
+
+        </div>
+    </div>
+</div>
+

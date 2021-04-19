@@ -1,0 +1,1 @@
+{"version":3,"file":"LocalStorageFactory.js","sourceRoot":"","sources":["LocalStorageFactory.ts"],"names":[],"mappings":";;AAAA,aAAa;AACb,6BAAoC,eAAe,EAAE,gBAAgB,EAAE,mBAAmB,EAAE,iBAAiB;IAC3G,wFAAwF;IACxF,IAAI,OAAO,GAAG,mBAAmB,CAAC;IAClC,iBAAiB,CAAC,UAAU,CAAC,OAAO,CAAC,CAAC;IACtC,OAAO,iBAAiB,CAAC;AAC3B,CAAC;AALD,kDAKC"}

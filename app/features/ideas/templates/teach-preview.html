@@ -1,0 +1,28 @@
+<view class="light-view flex-view ideas">
+  <activity-nav-bar></activity-nav-bar>
+  <nav class="activity-buttons-nav padded">
+    <activity-publish-button activity="$ctrl.activity" class="primary" type="ideas" specific-data="$ctrl.getSpecificData()"
+      is-dirty="$ctrl.form.$dirty" is-valid="$ctrl.form.$valid" pre-publish="$ctrl.prePublish()" post-publish="$ctrl.postPublish()"></activity-publish-button>
+  
+    </nav>
+
+  <div class="anonymous-checkbox">
+     <span>
+       {{'anonymous' | translate}}   
+     </span>  
+    <input type="checkbox" 
+        ng-model="$ctrl.activity.isAnonymous" 
+        style="width: auto;
+        display: inline;
+        height: auto;
+        -webkit-appearance: checkbox !important;">
+  </div>
+
+
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+      <preview-header type="ideas" is-required="false" field-name="title" activity="$ctrl.activity" form="$ctrl.form"></preview-header>
+    </form>
+  </content>
+
+</view>

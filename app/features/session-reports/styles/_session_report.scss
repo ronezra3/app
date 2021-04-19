@@ -1,0 +1,99 @@
+$session-report-dark-color: #515151;
+
+.session-report {
+  .narrow {
+    max-width: 58rem;
+  }
+}
+
+.session-report-minor-activities-wrapper {
+  margin-top: 0.625rem;
+  flex-wrap: nowrap;
+
+  > * {
+    width: 19.25rem;
+    margin-right: 0.5625rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.session-report-books {
+  color: $session-report-dark-color;
+
+  font-size: 1.25rem;
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+
+  text-align: left;
+
+  min-height: 4.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.session-report-session-time {
+  margin-left: 1.813rem;
+  font-size: 1rem;
+  display: inline-block;
+  font-family: Calibri;
+  font-style: italic;
+  line-height: 2.7rem;
+
+  display: none;
+}
+
+.session-report-replied {
+  text-align: center;
+  margin-top: 0.875rem;
+}
+
+.session-report-replied-label {
+  font-family: Alef;
+  color: #6d7173;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.session-report-replied-counter {
+  font-size: 1rem;
+  font-family: Calibri;
+  font-style: italic;
+  color: rgba(7, 23, 28, 0.7);
+  font-weight: 600;
+  text-align: center;
+}
+
+.session-report-carousel .book-location-container {
+  margin-top: 0.6rem;
+}
+
+.book-location-book-name {
+  color: $book-location-color;
+  font-size: 0.876rem;
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.book-location-page {
+  @extend .book-location-book-name;
+  font-family: Alef;
+  font-style: italic;
+}
+
+section .session-report-title {
+  @extend .extended-title;
+}
+
+@media only screen and (orientation: portrait) {
+  section .session-report-title {
+    display: none;
+  }
+}
+
+@import "session_report_section";

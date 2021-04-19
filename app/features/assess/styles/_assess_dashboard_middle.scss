@@ -1,0 +1,109 @@
+assess-dashboard-middle {
+  //flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+
+  .assess-dashboard-title {
+    font-family: Alef;
+
+    h1 {
+      margin: 0 0 1rem 0;
+      color: #123e4c;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1.812rem;
+      @include direction;
+      display: inline-block;
+    }
+
+    .timer {
+      color: #0c2730;
+      font-weight: 300;
+      font-size: 1.5rem;
+      display: inline-block;
+
+      span {
+        margin-right: 1.375rem;
+      }
+
+      &.timed-out {
+        color: #e5034d;
+
+        path {
+          fill: #e5034d;
+        }
+      }
+    }
+  }
+
+  .assess-dashboard-grade-and-progress-container {
+    margin-bottom: 1rem;
+    // overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.assess-dashboard-students-container {
+  @include horizontal-center();
+}
+
+.assess-dashboard-timer-icon {
+  // display: inline-block;
+  display: none;
+}
+
+.assess-dashboard-grade-container {
+  display: inline-block;
+  width: 20%;
+}
+
+.assess-dashboard-grade-box {
+  display: table;
+  background: $assess-dashboard-rectangles-color;
+  height: 6.063rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.assess-dashboard-grade-text {
+  display: table-cell;
+  color: $assess-color;
+  font-family: Alef;
+  font-style: italic;
+  font-size: 2.812rem;
+  vertical-align: middle;
+  padding-bottom: 22px;
+}
+
+.assess-dashboard-progress-container {
+  display: inline-block;
+  width: calc(80% - 1rem);
+  margin-left: 0.5625rem;
+}
+
+.assess-dashboard-progress-box {
+  @extend .assess-dashboard-grade-box;
+  margin-right: 0.5rem;
+}
+
+.assess-dashboard-progress-percentage {
+  color: $assess-color;
+  font-family: Alef;
+  font-style: italic;
+  font-size: 1.874rem;
+  vertical-align: middle;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.assess-dashboard-progress {
+  display: inline-block;
+  width: 90%;
+  vertical-align: middle;
+  //TODO
+  margin-top: 14px;
+  margin-left: 11px;
+}

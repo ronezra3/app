@@ -1,0 +1,25 @@
+.manage-tab-button {
+  font-family: Alef;
+  font-style: italic;
+  color:  rgba(74, 74, 74, 0.5);
+  font-size: 1.125rem;
+  font-weight: 600;
+  @include middle-align;
+
+  svg {
+    vertical-align: middle;
+  }
+
+  span {
+    vertical-align: middle;
+    margin-left: 0.5rem;
+  }
+
+  &.active, &.ng-click-active {
+    path {
+      fill: $main-color;
+    }
+
+    color: $main-color;
+  }
+}

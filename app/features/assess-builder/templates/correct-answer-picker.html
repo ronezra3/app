@@ -1,0 +1,7 @@
+<button ng-click="$ctrl.select()" class="assess-solve-answer-button"
+        ng-disabled="$ctrl.isDisabled"
+        ng-class="{'round' : $ctrl.question.type !== 'multi',
+                    'selected': $ctrl.answer.status}">
+  <ng-include ng-if="$ctrl.question.type === 'multi'" src="'images/v_icon2.png'"></ng-include>
+  <div ng-if="$ctrl.question.type !== 'multi'" class="circle"></div>
+</button>

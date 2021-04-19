@@ -1,0 +1,14 @@
+<view class="light-view assess flex-view">
+  <activity-nav-bar></activity-nav-bar>
+  <nav class="activity-buttons-nav padded">
+    <activity-remove-button class="secondary" type="assess" ng-if="$ctrl.activity.id"
+                            activity="$ctrl.activity"></activity-remove-button>
+    <assess-save-button class="primary" activity="$ctrl.activity" type="assess"
+                        specific-data="$ctrl.getSpecificData()" is-valid="$ctrl.form.$valid"></assess-save-button>
+  </nav>
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+      <assess-preview-content activity="$ctrl.activity" form="$ctrl.form" is-required="true"></assess-preview-content>
+    </form>
+  </content>
+</view>

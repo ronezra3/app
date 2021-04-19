@@ -1,0 +1,38 @@
+activity-remove-button {
+  //background-image: linear-gradient(90deg, #67B4DD,#4E8CCA, #3667B8);
+  height: 2.5rem;
+  width: 10rem;
+  border: solid 0.125rem #3667B8;
+  border-radius: 0.625rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.375rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  @media only screen and (orientation: portrait) {
+    width: 30vw;
+    font-size: 1.2rem;
+    //margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
+  span {
+    display: inline-block;
+    margin-top: -0.375rem;
+    margin-right: -0.5rem;
+    color: #3667B8 !important;
+  }
+
+  svg {
+    width: 1rem;
+  }
+
+  .standby svg {
+    height: 1.313rem;
+  }
+
+  .pressed svg {
+    height: 1.5rem;
+  }
+}

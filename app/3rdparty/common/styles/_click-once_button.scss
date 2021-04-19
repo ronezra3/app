@@ -1,0 +1,17 @@
+button {
+  circular-progress-bar,
+  loader {
+    display: none;
+  }
+}
+
+button.loading {
+  circular-progress-bar,
+  loader {
+    display: inline-block;
+  }
+
+  > *:not(circular-progress-bar, loader) {
+    display: none;
+  }
+}

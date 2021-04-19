@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="11px" height="13px" viewBox="0 0 11 13"><g id="Layer_1">
+	<g>
+		<circle fill-rule="evenodd" clip-rule="evenodd" cx="5.4" cy="3.3" r="3.3"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M5.4,7.5L5.4,7.5L5.4,7.5L5.4,7.5L5.4,7.5C0.5,7.5,0,11.4,0,11.8
+			v0.5C0,13,0.7,13,1,13h4.4h0.1h4.4c0.4,0,1,0,1-0.8v-0.5C10.9,11.4,10.4,7.5,5.4,7.5z"/>
+	</g>
+</g>
+</svg>

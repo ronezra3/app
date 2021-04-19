@@ -1,0 +1,28 @@
+.ideas-session-report-title {
+  margin-top: 2.313rem;
+  text-align: center;
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: $session-report-dark-color;
+  @include direction;
+}
+
+.ideas-session-report-replied-number {
+  margin-top: 1.688rem;
+  display: block;
+
+  .replied-counter {
+    font-size: 1rem;
+  }
+
+  .replied-label {
+    font-size: 1rem;
+  }
+}
+
+.ideas-most-popular-words-background .popular-words-container {
+  background-color: $gray-view-background;
+  margin: 0.5rem 1rem;
+}

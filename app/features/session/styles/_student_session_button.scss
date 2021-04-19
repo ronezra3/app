@@ -1,0 +1,40 @@
+.session-button {
+  width: 100%;
+  height: $nav-bar-height;
+  text-align: center;
+
+  &.on-session {
+    background-color: $panel-top-buttons-color;
+
+    &.ng-click-active:enabled {
+      background-color: $secondary-color;
+    }
+  }
+
+  &.off-session {
+    background-color: $main-color;
+
+    &.ng-click-active:enabled {
+      background-color: $secondary-color;
+    }
+  }
+
+  color: $panel-buttons-enable-color;
+  font-family: Alef;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.session-clock {
+  vertical-align: middle;
+
+  svg {
+    fill: $panel-buttons-enable-color;
+    height: 1.25rem;
+    width: 1.063rem;
+
+    path {
+      fill: $panel-buttons-enable-color;
+    }
+  }
+}

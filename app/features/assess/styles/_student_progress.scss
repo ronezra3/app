@@ -1,0 +1,47 @@
+.assess-solve-progress-step {
+  clear: both;
+  text-align: center;
+  margin: auto;
+  // line-height: 1.5625rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 1px solid $assess-color;
+  border-radius: 50%;
+  background: transparent;
+  color: $assess-color;
+  font-family: Alef;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.assess-solve-progress-step-answered {
+  @extend .assess-solve-progress-step;
+  background: $assess-color;
+  border-color: $assess-color;
+  color: transparent;
+  position: relative;
+}
+
+.assess-solve-progress-step-answered-icon {
+  position: absolute;
+  right: -11px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.assess-solve-progress-step-answered-icon svg {
+  height: 10px;
+}
+
+.assess-solve-progress-step-line {
+  margin: auto;
+  text-align: center;
+  height: 2rem;
+  width: 1px;
+  background: grey;
+}
+
+.assess-solve-progress-step-line-answered {
+  @extend .assess-solve-progress-step-line;
+  background: $assess-color;
+}

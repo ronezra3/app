@@ -1,0 +1,11 @@
+<view hardware-back-button-enabled="!$ctrl.isPlaying && !$ctrl.disableSharing"
+      class="light-view participant flex-view results">
+  <activity-nav-bar></activity-nav-bar>
+  <activity-teach-results-footer type="participant" disable-sharing="$ctrl.disableSharing" activity="$ctrl.activity"
+                                 is-playing="$ctrl.isPlaying"
+                                 post-share-callback="$ctrl.postShareCallback()"></activity-teach-results-footer>
+  <content scrollable="true">
+    <participant-results-content activity="$ctrl.activity"></participant-results-content>
+  </content>
+  
+</view>

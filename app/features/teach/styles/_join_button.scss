@@ -1,0 +1,25 @@
+.join-button {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.7rem;
+  color: $panel-buttons-enable-color;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Alef;
+  font-weight: 400;
+  font-size: 1.25rem;
+  background-color: $main-color;
+
+  > * {
+    line-height: 1rem;
+  }
+
+  .session-clock {
+    @include margin-right(0.3rem);
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+}

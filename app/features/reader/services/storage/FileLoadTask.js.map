@@ -1,0 +1,1 @@
+{"version":3,"file":"FileLoadTask.js","sourceRoot":"","sources":["FileLoadTask.ts"],"names":[],"mappings":";;AAAA,aAAa;AACb,sBAA6B,eAAe,EAAE,sBAAsB,EAAE,kBAAkB;IACtF,6EAA6E;IAC7E,IAAI,eAAe,CAAC,kBAAkB,EAAE,IAAI,CAAC,eAAe,CAAC,SAAS,EAAE,EAAE;QACxE,OAAO,kBAAkB,CAAC;KAC3B;IAED,OAAO,sBAAsB,CAAC;AAChC,CAAC;AAPD,oCAOC"}

@@ -1,0 +1,36 @@
+.manage-student-avatar {
+  width: 4.188rem;
+  height: 4.188rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.manage-student-circle {
+  @include circle;
+  width: 100%;
+  height: 100%;
+}
+
+.manage-student-img {
+  width: 100%;
+  height: 100%;
+}
+
+.manage-student-icon {
+  @include circle;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: $main-color;
+  position: absolute;
+  text-align: center;
+  bottom: -0.3rem;
+  right: -0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  path {
+    fill: $secondary-color;
+  }
+}

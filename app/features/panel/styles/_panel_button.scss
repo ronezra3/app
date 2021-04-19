@@ -1,0 +1,83 @@
+panel .panel-button {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background-color: $panel-middle-buttons-color;
+  color: $panel-buttons-enable-color;
+  border-radius: 0.125rem;
+  font-family: Alef;
+  position: relative;
+
+  .text {
+    font-size: 0.875rem;
+    margin-top: 0.6rem;
+    display: block;
+  }
+
+  .layer-indication {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    opacity: 0.9;
+  }
+
+  .number-icon {
+    font-size: 2.625rem;
+    line-height: 2.625rem;
+  }
+
+  svg,
+  .number-icon {
+    transition: all .2s ease-in-out;
+  }
+
+  svg {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    height: 100%;
+    width: 100%;
+
+    ellipse,
+    path {
+      fill: $panel-buttons-enable-color;
+    }
+  }
+
+  &.ng-click-active:enabled {
+    svg {
+      transform: scale(0.6);
+    }
+
+    .number-icon {
+      font-size: 1rem;
+    }
+
+    background-color: $secondary-color;
+  }
+
+  &[disabled] {
+    color: #24596a;
+
+    ellipse,
+    path {
+      fill: #24596a;
+    }
+  }
+
+  &.selected {
+    background-color: $secondary-color;
+  }
+}
+
+mdm-section .panel-button {
+  background-color: $panel-top-buttons-color;
+}
+
+@mixin activity-section-button-color($color) {
+  .layer-indication,
+  &.ng-click-active:enabled {
+    background-color: $color;
+  }
+}

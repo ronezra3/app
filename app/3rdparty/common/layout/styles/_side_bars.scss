@@ -1,0 +1,77 @@
+$sidebar-backdrop: rgba(7, 23, 28, 0.6);
+
+.side-bars {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+right-side-bar {
+  display: block;
+}
+
+.side-bars-content {
+  height: 100%;
+  flex: 1 1;
+  overflow: hidden;
+}
+
+.side-bars-content > section {
+  height: 100%;
+}
+
+.side-bar-container {
+  background-color: #22282e;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  z-index: 100;
+}
+
+@media only screen and (max-width: $mini-tablet-max-screen-width) and (orientation: portrait),
+screen and (max-width: $mini-tablet-max-screen-height) and (orientation: landscape),
+screen and (orientation: portrait) {
+  .sidebars-backdrop {
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $sidebar-backdrop;
+  }
+
+  .easeIn {
+    transition-timing-function: ease-in;
+  }
+
+  .easeOut {
+    transition-timing-function: ease-out;
+  }
+
+  .side-bar-container {
+    @extend .easeIn;
+    transition-duration: 0.2s;
+
+    position: absolute;
+    top: 0;
+    z-index: 30;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.098), 0 1px 10px 0 rgba(0, 0, 0, 0.084);
+
+    transform: translate3d(0, 0, 0);
+  }
+
+  .side-bar-container.closed {
+    @extend .easeOut;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  .side-bar-right {
+    right: 0;
+  }
+}

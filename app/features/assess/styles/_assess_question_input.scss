@@ -1,0 +1,199 @@
+$assess-question-input-background-color: rgba(241, 240, 239, 0.7);
+
+.assess {
+  .question-input {
+    height: 5.438rem;
+    padding-top: 0.3125rem;
+    font-size: 1.5rem;
+    line-height: normal;
+    resize: none;
+    width: 100%;
+    font-family: Alef;
+  }
+  // .question-input ,
+  // .question-input::-webkit-input-placeholder {
+  // }
+  assess-answer {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    text-align: center;
+    direction: rtl;
+
+    .index {
+      font-size: 1.5rem;
+      margin-right: 0.875rem;
+    }
+
+    .input-container {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      height: 3.3rem;
+      display: flex;
+      align-items: center;
+
+      .answer-input {
+        resize: none;
+        font-size: 1.5rem;
+        line-height: 2.7rem;
+        font-family: Alef;
+
+        &.immediate-feedback-enabled {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      .feedback-input {
+        z-index: 1;
+        color: $assess-color;
+        background-color: lighten(#FDBC4D,15%);
+        width: 0;
+        // Necessary for IOS
+        padding: 0;
+        position: absolute;
+        transition: all 1s;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        top: 0.15rem;
+
+        &.feedback-shown {
+          width: 100%;
+          padding-left: 1.25rem;
+        }
+
+        &::-webkit-input-placeholder {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .feedback-button {
+      background-color: $assess-question-input-background-color;
+      height: 3rem;
+      width: 3rem;
+      transition: background-color 1s;
+      border-top-right-radius: 0.3125rem;
+      border-bottom-right-radius: 0.3125rem;
+
+      .feedback-circle {
+        background-color: #cccccc;
+        width: 0.375rem;
+        height: 0.375rem;
+        border-radius: 50%;
+        font-size: 1rem;
+        display: inline-block;
+        margin-left: 0.063rem;
+      }
+
+      &.hasFeedback .feedback-circle {
+        background-color: $assess-color;
+      }
+
+      &.feedback-shown {
+        background-color: lighten(#FDBC4D,15%);
+        ;
+      }
+    }
+
+    .delete {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      margin-right: 0.688rem;
+
+      svg {
+        width: 1.1875rem;
+        height: 1.125rem;
+        display: inline-block;
+
+        path {
+          fill: #d7d7d7;
+        }
+      }
+
+      &.ng-click-active path {
+        fill: #6a6a6a;
+      }
+
+      &[disabled] path {
+        fill: #f5f4f4;
+      }
+    }
+
+    .assess-solve-answer-button {
+      margin-right: 0.438rem;
+    }
+  }
+}
+
+.assess-question-number {
+  color: $activities-input-color;
+  font-weight: 700;
+  font-size: 1.5rem;
+  float: right;
+  direction: rtl;
+  margin-left: 0.813rem;
+}
+
+.assess-question-title-container {
+  overflow: hidden;
+}
+
+.assess-question-title {
+  height: 5.438rem;
+  resize: none;
+  font-size: 1.249rem;
+  width: 100%;
+}
+
+.assess-question-remove-button {
+  float: left;
+  border: none;
+  background-color: transparent;
+  margin-top: 0.625rem;
+  padding: 0;
+  margin-right: 0.688rem;
+
+  svg {
+    width: 1.1875rem;
+    height: 1.125rem;
+
+    path {
+      fill: #b54141;
+    }
+  }
+
+  &.ng-click-active path {
+    fill: #ff3f3f;
+  }
+}
+
+.assess-solve-answer-button {
+  float: left;
+  margin-right: 0.438rem;
+}
+
+.assess-question-add-answer {
+  color: $activities-input-color;
+  font-style: italic;
+  font-size: 0.999rem;
+  border-radius: 0.313rem;
+  border: 0.0625rem dashed rgba(119, 119, 119, 0.5);
+  width: 100%;
+  height: 2.438rem;
+  margin: 0.688rem auto 0;
+  resize: none;
+  @include padding-left(1rem);
+  padding-bottom: 0rem;
+  @include padding-right(1rem);
+
+  overflow: auto;
+  @include text-align(left);
+  @include direction;
+
+  &[disabled] {
+    background-color: #f8f8f8;
+  }
+}

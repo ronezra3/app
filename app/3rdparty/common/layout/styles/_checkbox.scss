@@ -1,0 +1,42 @@
+input[type="checkbox"] {
+  display: none;
+
+  & + label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .fake-checkbox {
+      // fix for ios + fastclick making label not clickable
+      pointer-events: none;
+      width: 2.2rem;
+      height: 2.2rem;
+      margin-right: 0.25rem;
+      cursor: pointer;
+      border-radius: 0.125rem;
+      background-color: #ebedee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        transition: all 0.3s;
+        transform: scale(1, 1);
+        width: 1.1rem;
+        height: 1.1rem;
+
+        path {
+          fill: rgba(81, 81, 81, 0.1);
+        }
+      }
+    }
+  }
+
+  &:checked + label .fake-checkbox svg {
+    transform: scale(1.4, 1.4);
+
+    path {
+      fill: rgba(81, 81, 81, 1);
+    }
+  }
+}

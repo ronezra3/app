@@ -1,0 +1,35 @@
+<section class="session-report-section {{ activities ? type : ''}}"
+         ng-class="{'minor-activity-session-report-section': type !== 'assess',
+          'assess-session-report-section': type === 'assess'}">
+  <header>
+    <button class="nav-button" ng-disabled="isFirst()" ng-click="leftButtonClick()">
+      <ng-include class="arrow" src="'images/left_arrow.png'"></ng-include>
+    </button>
+
+    <div class="title">
+      <svg-icon class="icon" src="{{'images/panel/icons/' + type + '.png'}}"></svg-icon>
+      <span>{{type + '-plural' | translate}}</span>
+    </div>
+
+    <button class="nav-button" ng-disabled="isLast()" ng-click="rightButtonClick()">
+      <ng-include class="arrow" src="'images/right_arrow.png'"></ng-include>
+    </button>
+  </header>
+
+  <ul rn-carousel-index="index" rn-carousel ng-show="activities" class="session-report-carousel">
+    <li ng-repeat="activity in activities" ng-switch on="type">
+      <snapshot-session-report ng-switch-when="snapshot" activity="activity"></snapshot-session-report>
+      <ideas-session-report ng-switch-when="ideas" activity="activity"></ideas-session-report>
+      <poll-session-report ng-switch-when="poll" activity="activity"></poll-session-report>
+      <assess-session-report ng-switch-when="assess" class-id="classId" activity="activity"></assess-session-report>
+    </li>
+  </ul>
+
+  <article class="session-report-section-empty" ng-class="type" ng-show="!activities">
+    <div class="session-report-section-empty-middle">
+      <svg-icon class="session-report-empty-activity-icon" src="{{'images/panel/icons/' + type + '.png'}}"></svg-icon>
+      <svg-icon class="session-report-empty-activity-shadow"
+                src="images/session-report/activity_icon_shadow.png"></svg-icon>
+    </div>
+  </article>
+</section>

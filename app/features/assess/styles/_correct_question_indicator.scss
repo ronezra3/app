@@ -1,0 +1,42 @@
+correct-question-indicator {
+  display: none; // hide, before decision about removing
+  .question-status {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ng-include {
+      display: flex;
+    }
+
+    svg {
+      width: 1.1875rem;
+      height: 1.125rem;
+
+      path {
+        fill: white;
+      }
+
+      @media only screen and (max-width: $smart-phone-max-screen-width) and (orientation: portrait),
+      screen and (max-width: $smart-phone-max-screen-height) and (orientation: landscape) {
+        width: 0.8rem;
+        height: 0.757rem;
+      }
+    }
+
+    &.correct {
+      background-color: $assess-correct-color;
+    }
+
+    &.incorrect {
+      background-color: $assess-incorrect-color;
+    }
+
+    @media only screen and (max-width: $mini-tablet-max-screen-height) and (orientation: landscape) {
+      left: -0.7rem;
+    }
+  }
+}

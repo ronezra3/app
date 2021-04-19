@@ -1,0 +1,50 @@
+.ngdialog {
+  display: flex;
+
+  .ngdialog-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    &.ngdialog-closing {
+      display: none;
+    }
+  }
+}
+
+.ngdialog.ngdialog-theme-default.live-rhino {
+  padding: 1rem;
+
+  .ngdialog-content {
+    margin: auto;
+    line-height: initial;
+    background-color: white;
+    color: #0d2c35;
+    font-size: 1.313rem;
+    font-family: Alef;
+    font-style: italic;
+    svg {
+      width: 100%;
+    }
+  }
+
+  header {
+    font-size: 2rem;
+    margin-bottom: 2.4375rem;
+  }
+
+  footer {
+    margin-top: 2.4375rem;
+  }
+}
+
+.ngdialog.ngdialog-theme-default.live-rhino.new .ngdialog-content {
+  font-family: Ubuntu;
+  font-style: normal;
+
+  header {
+    font-size: inherit;
+    margin-bottom: inherit;
+  }
+}

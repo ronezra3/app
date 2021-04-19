@@ -1,0 +1,13 @@
+<view hardware-back-button-enabled="false" class="poll light-view">
+  <content class="padded narrow" scrollable="true">
+    <activity-header class="student" type="poll" field="$ctrl.activity.question"></activity-header>
+
+    <div class="poll-vote-answers-wrapper">
+      <ul class="poll-vote-answers-list">
+        <li ng-repeat="answer in $ctrl.activity.answers">
+          <poll-submit-button index="$index" activity="$ctrl.activity" answer="answer"></poll-submit-button>
+        </li>
+      </ul>
+    </div>
+  </content>
+</view>

@@ -1,0 +1,127 @@
+.assess-dashboard-students-container {
+  display: block;
+  flex: 5.3;
+}
+
+.assess-dashboard-students-header {
+  height: 1rem;
+}
+
+.assess-dashboard-students-tabs {
+  display: inline-block;
+  float: left;
+  margin-top: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.assess-dashboard-students-tab {
+  display: inline-block;
+  border: 0;
+  margin-right: 1.0625rem;
+  background: transparent;
+}
+
+.assess-dashboard-students-tab-text {
+  color: rgba(18, 62, 76, 0.9);
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.874rem;
+  @include direction;
+}
+
+.assess-dashboard-students-tab-underline {
+  width: 100%;
+  height: 3px;
+  background: $assess-color;
+  border-radius: 50px;
+}
+
+.assess-dashboard-students-search {
+  float: right;
+  height: 1.75rem;
+}
+
+.assess-dashboard-students-search .search-box {
+  border-radius: 1.5rem;
+  border: 1px solid #abaaa9;
+  background-color: #f1f0ef;
+}
+
+.assess-dashboard-students-search .search-box.searching {
+  border-color: #515151;
+}
+
+.assess-dashboard-students-search .search-box.searching path {
+  fill: #515151;
+}
+
+.assess-dashboard-students-search input {
+  width: 8.5rem;
+  color: #123e4c !important;
+}
+
+@mixin search-place-holder() {
+  color: #abaaa9;
+  font-family: Alef;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1rem; // !important;
+  line-height: 1.3;
+}
+
+input[type="search"].assess-dashboard-students-search-input::-webkit-input-placeholder {
+  @include search-place-holder();
+}
+
+input[type="search"].assess-dashboard-students-search-input:-moz-placeholder {
+  /* Firefox 18- */
+  @include search-place-holder();
+}
+
+input[type="search"].assess-dashboard-students-search-input::-moz-placeholder {
+  /* Firefox 19+ */
+  @include search-place-holder();
+}
+
+input[type="search"].assess-dashboard-students-search-input:-ms-input-placeholder {
+  @include search-place-holder();
+}
+
+.assess-dashboard-students-box {
+  width: 100%;
+  margin-top: 1.3rem;
+  background-color: #e6e5e4;
+  height: 18.5rem;
+  overflow-y: auto;
+}
+
+.assess-dashboard-students-list {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.assess-dashboard-students-questions-student {
+  display: inline-block;
+  float: left;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.assess-dashboard-students-questions-close-button {
+  background: transparent;
+  display: inline-block;
+  float: right;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border: 0;
+}
+
+@media only screen and (orientation: portrait) {
+  .assess-dashboard-students-search {
+    display: none;
+  }
+}

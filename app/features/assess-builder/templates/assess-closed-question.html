@@ -1,0 +1,16 @@
+<div class="assess-question-title-container">
+  <textarea class="question-input" style="direction: rtl" ng-model="$ctrl.question.content"
+            ng-required="!$ctrl.isInSession()"
+            placeholder="{{($ctrl.isInSession() ? 'default-assess-' + $ctrl.question.type + '-question' :
+             'assess-' + $ctrl.question.type + '-question-placeholder') | translate}}"></textarea>
+</div>
+
+<assess-answer class="assess-question-answer-container animate-repeat" ng-repeat="answer in $ctrl.question.answers"
+               answer="answer" immediate-feedback="$ctrl.immediateFeedback"
+               question="$ctrl.question"
+               answer-number="{{$index +1}}"></assess-answer>
+
+<button class="assess-question-add-answer" ng-click="$ctrl.addAnswer($event)"
+        ng-disabled="!$ctrl.questionService.canAddAnswer($ctrl.question)">
+  {{'add_option' | translate}}
+</button>

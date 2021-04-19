@@ -1,0 +1,10 @@
+<view class="light-view flex-view poll">
+  <activity-nav-bar></activity-nav-bar>
+  <activity-enrich-preview-footer activity="$ctrl.activity" type="poll" get-specific-data="$ctrl.getSpecificData()"
+  is-valid="$ctrl.form.$valid"></activity-enrich-preview-footer>
+  <content class="padded" scrollable="true">
+    <form class="narrow" name="$ctrl.form">
+      <poll-preview-content is-required="true" form="$ctrl.form" activity="$ctrl.activity"></poll-preview-content>
+    </form>
+  </content>
+</view>
